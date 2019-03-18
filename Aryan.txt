@@ -1,0 +1,8 @@
+total 28
+-rw-rw-r-- 1 aryan aryan    0 Mar 19 00:23 Aryan.txt
+drwxrwxr-x 2 aryan aryan 4096 Mar 18 01:11 css
+drwxrwxr-x 6 aryan aryan 4096 Mar 18 01:11 fonts
+drwxrwxr-x 3 aryan aryan 4096 Mar 18 01:11 images
+-rwxr-xr-x 1 aryan aryan 4524 Mar 18 01:11 index.html
+drwxrwxr-x 2 aryan aryan 4096 Mar 18 01:11 js
+drwxrwxr-x 8 aryan aryan 4096 Mar 18 01:11 vendor
