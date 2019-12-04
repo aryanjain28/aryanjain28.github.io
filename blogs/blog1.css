@@ -1,0 +1,60 @@
+#mainBorder{
+    /* border: 1px black solid; */
+    margin: 4% 20% 10% 20%;
+}
+
+#defination{
+    font-size: 35px;
+    font-family: 'Cookie', cursive;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+}
+
+#mainHeading{
+    font-family: 'Baskervville', serif;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+#minorHeading{
+    font-family: 'Muli', sans-serif;
+    font-size: 25px;
+    letter-spacing: 0px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#majorHeading{
+    font-family: 'Muli', sans-serif;
+    font-size: 33px;
+    letter-spacing: 0px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#mainBody{
+    font-family: 'Muli', sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+}
+
+#contentImages{
+    border: solid, black 2px;
+    margin: 50px 10px 80px 10px ;           /* top right bottom left */
+    vertical-align: center;
+}
+
+#formula{
+    font-size: 20px;
+    margin: 20px 0px 40px 0px;
+    font-weight: bolder;
+}
+
+
+#formula2{
+    text-align: center;
+    color: dimgray;
+    font-size: 40px;
+    margin: 20px 0px 40px 0px;
+}

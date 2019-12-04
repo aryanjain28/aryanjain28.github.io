@@ -1,0 +1,170 @@
+<html>
+    <head>
+        <title>Introduction to Linear Regression and Polynomial Regression</title>
+        <link rel="stylesheet" href="blogs/blog2.css">
+        <link href="https://fonts.googleapis.com/css?family=Baskervville|Muli&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cookie&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet"> 
+        
+    </head>
+    <body>
+        <div id="mainBorder">
+                <div id="mainHeading">
+                        Introduction to Linear Regression and Polynomial Regression
+                </div>
+                <div id="contentImages">
+                        <center><img src="images/blog2/image1.png" width="700" height=""/></center>
+                </div>
+                <div id="majorHeading">
+                        Introduction
+                </div>
+                <div id="mainBody">
+                        In this blog, we will discuss two important topics that will form a base for Machine Learning which is “Linear Regression” and “Polynomial Regression”.
+                </div>
+                <div id="majorHeading">
+                        What is Regression?
+                </div>
+                <div id="defination">
+                    Regression analysis is a form of predictive modelling technique which investigates the relationship between a dependent and independent variable.
+                </div>
+
+                <div id="mainBody">
+                        The above definition is a bookish definition, in simple terms the regression can be defined as, <i>“Using the relationship between variables to find the best fit line or the regression equation that can be used to make predictions”.</i>
+                </div>
+
+                <div id="contentImages">
+                        <center><img src="images/blog2/image2.png" width="700" height=""/></center>
+                </div>
+
+                <div id="mainBody">
+                        There are many types of regressions such as ‘Linear Regression’, ‘Polynomial Regression’, ‘Logistic regression’ and others but in this blog, we are going to study “Linear Regression” and “Polynomial Regression”.
+                </div>
+
+                <div id="majorHeading">
+                        Linear Regression
+                </div>
+
+                <div id="mainBody">
+                        Linear regression is a basic and commonly used type of predictive analysis which usually works on continuous data. We will try to understand linear regression based on an example:
+                        <br><br>
+                        Aarav is a trying to buy a house and is collecting housing data so that he can estimate the “cost” of the house according to the “Living area” of the house in feet.
+                </div>
+                
+                <div id="contentImages">
+                        <center><img src="images/blog2/image3.png" width="300" height=""/></center>
+                </div>
+
+                <div id="mainBody">
+                        He observes the data and comes to the conclusion that the data is linear after he plots the scatter plot. For his first scatter plot, Aarav uses two variables: ‘Living area’ and ‘Price’.
+                </div>
+
+                <div id="contentImages">
+                        <center><img src="images/blog2/image4.png" width="700" height=""/></center>
+                </div>
+
+                <div id="mainBody">
+                        As soon as he saw a pattern in the data, he planned to make a regression line on the graph so that he can use the line to predict the ‘price of the house’.
+                        <br><br>
+                        Using the training data i.e ‘Price’ and ‘Living area’, a regression line is obtained which will give the minimum error. To do that he needs to make a line that is closest to as many points as possible. This ‘linear equation’ is then used for any new data so that he is able to predict the required output.                
+                </div>
+
+                <div id="contentImages">
+                        <center><img src="images/blog2/image5.png" width="500" height=""/></center>
+                </div>
+
+                <div id="mainBody">
+                        Here, the β1 it’s are the parameters (also called weights) βo is the y-intercept and Єi is the random error term whose role is to add bias. The above equation is the linear equation that needs to be obtained with the minimum error.
+                        <br><br>
+                        The above equation is a simple “equation of a line” that is
+                </div>
+
+                <div id="formula">
+                        |  Y(predicted) = (β1*x + βo) + Error value
+                </div>
+
+                <div id="mainBody">
+                        Where ‘β1’ is the slope and ‘βo’ is the y-intercept similar to the equation of a line. The values ‘β1’ and ‘βo’ must be chosen so that they minimize the error. To check the error we have to calculate the sum of squared error and tune the parameters to try to reduce the error.
+                </div>
+
+                <div id="formula2">
+                        Error = Σ (actual output — predicted output)²
+                  </div>
+
+                Error = Σ (actual output — predicted output)²
+
+                <div id="contentImages">
+                        <center><img src="images/blog2/image6.png" width="300" height=""/></center>
+                </div>
+
+                <div id="mainBody">
+                        Key:<br>
+                        1. Y(predicted) is also called the hypothesis function.<br>
+                        2. J(θ) is the cost function which can also be called the error function. Our main goal is to minimize the value of the cost.<br>
+                        3. y(i) is the predicted output.<br>
+                        4. hθ(x(i)) is called the hypothesis function which is basically the Y(predicted) value.<br><br>
+
+                        Now the question arises, how do we reduce the error value. Well, this can be done by using Gradient Descent. The main goal of Gradient descent is to minimize the cost value. i.e. min J(θo, θ1)
+                </div>
+                <div id="contentImages">
+                        <center><img src="images/blog2/image7.gif" width="500" height=""/></center>
+                </div>
+
+                <div id="mainBody">
+                        Gradient descent has an analogy in which we have to imagine ourselves at the top of a mountain valley and left stranded and blindfolded, our objective is to reach the bottom of the hill. Feeling the slope of the terrain around you is what everyone would do. Well, this action is analogous to calculating the gradient descent, and taking a step is analogous to one iteration of the update to the parameters.
+                </div>
+
+                <div id="contentImages">
+                        <center><img src="images/blog2/image8.png" width="700" height=""/></center>
+                </div>
+
+                <div id="mainBody">
+                        Choosing a perfect learning rate is a very important task as it depends on how large of a step we take downhill during each iteration. If we take too large of a step, we may step over the minimum. However, if we take small steps, it will require many iterations to arrive at the minimum.
+                </div>
+
+                <div id="contentImages">
+                        <center><img src="images/blog2/image9.gif" width="700" height=""/></center>
+                </div>
+
+                <div id="majorHeading">
+                        Polynomial Linear Regression
+                </div>
+
+                <div id="mainBody">
+                        In the last section, we saw two variables in your data set were correlated but what happens if we know that our data is correlated, but the relationship doesn’t look linear? So hence depending on what the data looks like, we can do a polynomial regression on the data to fit a polynomial equation to it.
+                </div>
+
+                <div id="contentImages">
+                        <center><img src="images/blog2/image10.gif" width="700" height=""/></center>
+                </div>
+
+                <div id="contentImages">
+                        <center><img src="images/blog2/image11.gif" width="700" height=""/></center>
+                </div>
+
+                <div id="mainBody">
+                        Hence If we try to use a simple linear regression in the above graph then the linear regression line won’t fit very well. It is very difficult to fit a linear regression line in the above graph with a low value of error. Hence we can try to use the polynomial regression to fit a polynomial line so that we can achieve a minimum error or minimum cost function. The equation of the polynomial regression for the above graph data would be:
+                </div>
+
+                <div id="formula2">
+                        y = θo + θ₁x₁ + θ₂ x₁²
+                </div>
+
+                <div id="mainBody">
+                        This is the general equation of a polynomial regression is:
+                </div>
+
+                <div id="formula2">
+                        Y=θo + θ₁X + θ₂X² + … + θₘXᵐ + residual error
+                </div>
+
+                <div id="majorHeading">
+                        Conclusion
+                </div>
+        
+                <div id="mainBody">
+                        In this blog, I have presented you with the basic concept of Linear Regression and Polynomial Regression.
+                </div>
+
+        </div>
+    </body>
+</html>
