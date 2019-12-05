@@ -14,7 +14,7 @@ body.active{
 
 
 .btn-rounded-white{
-        width: 190px;
+        min-width: 190px;
 	display:inline-block;
 	color:#fff;
 	padding:15px 25px;
@@ -30,7 +30,7 @@ body.active{
 }
 
 .btn-rounded-white{
-        width: 190px;
+        min-width: 190px;
 	display:inline-block;
 	color:#fff;
 	padding:15px 25px;
