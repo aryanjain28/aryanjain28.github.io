@@ -160,7 +160,10 @@ body.active{
     background:#fff;
     border-radius:4px}
 
-.project-image{float:left}
+.project-image{
+	float:left;
+	padding:10px
+}
 
 .project-info{
     position:absolute;
