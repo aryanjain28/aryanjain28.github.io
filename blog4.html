@@ -1,0 +1,310 @@
+<html>
+    <head>
+        <title>R-CNN, Fast R-CNN, Faster R-CNN</title>
+        <link rel="stylesheet" href="blogs/blog4.css">
+        <link href="https://fonts.googleapis.com/css?family=Baskervville|Muli&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cookie&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet"> 
+        
+    </head>
+    <body>
+        <div id="mainBorder">
+                <div id="mainHeading">
+                        R-CNN, Fast R-CNN, Faster R-CNN
+                </div>
+
+                <div id="mainBody">
+                        Wtf with this name right?        
+                </div>
+
+                <div id="majorHeading">
+                        Introduction
+                </div>
+
+                <div id="mainBody">
+                        Computer vision is an interdisciplinary field that has been gaining huge amounts of traction in the recent years(since CNN) and self-driving cars have taken centre stage. Another integral part of computer vision is object detection. Object detection aids in pose estimation, vehicle detection, surveillance etc.
+                </div>
+
+                <div id="contentImages">
+                        <center><img src="images/blog4/image1.png" width="700" height=""/></center>
+                </div>
+
+
+                <div id="majorHeading">
+                        But why R-CNN, fast R-CNN.... <br>When we alread have CNN for image classification!?
+                </div>
+
+
+                <div id="mainBody">
+                        The difference between object detection algorithms (btw RCNN(s) are object detection algorithms) and classification algorithms is that in detection algorithms, we try to draw a bounding box around the object of interest to locate it within the image. Also, you might not necessarily draw just one bounding box in an object detection case, there could be many bounding boxes representing different objects of interest within the image and you would not know how many beforehand.
+                </div>
+                <br /><br />
+
+                <div id="majorHeading">
+                        So, why can't we use CNN for this?
+                </div>
+
+                <div id="mainBody">
+                        Well! To be completely honest, we can.<br><br>
+                        BUT!<br><br>
+                        The major reason why you cannot proceed with this problem by building a standard convolutional network followed by a fully connected layer is that, the length of the output layer is variable — not constant, this is because the number of occurrences of the objects of interest is not fixed.
+                        <br><br>
+                        A naive approach to solve this problem would be to take different regions of interest from the image, and use a CNN to classify the presence of the object within that region.
+                        <br><br>
+
+                </div>
+
+                <div id="contentImages">
+                        <center><img src="images/blog4/image2.png" width="700" height=""/></center>
+                </div>
+
+                <div id="mainBody">
+                        The problem with this approach is that the objects of interest might have different spatial locations within the image and different aspect ratios. Hence, you would have to select a huge number of regions and this could computationally blow up. Therefore, algorithms like R-CNN, YOLO etc have been developed to find these occurrences and find them fast.
+                </div>
+                <br /><br />
+
+                <div id="majorHeading">
+                        Region proposals
+                </div>
+                <br/>
+                <div id="defination">
+                        Region proposals are just smaller parts of the original image, that we think could contain the objects we are searching for.
+                </div>
+
+                <div id="mainBody">
+                        There are different region proposal algorithms we can choose from. These are “normal” algorithms that work out of the box. We don’t have to train them or anything. In the case of this paper, they use the selective search method to generate region proposals.
+                </div>
+
+
+
+
+                <div id="mainBody">
+                        Now what is Selective search methods?
+                </div>
+                
+                <div id="mainBody">
+                        So basically there are four regions that form an object: varying scales, colors, textures, and enclosure. Selective search identifies these patterns in the image and based on that, proposes various regions.
+                </div>
+               
+                <div id="contentImages">
+                        <center><img src="images/blog4/image3.png" width="650" height=""/></center>
+                </div>
+
+
+                <div id="mainBody">
+                        1. It first takes an image as input.
+                        <br/><br/>2. Then, it generates initial sub-segmentations so that we have multiple regions from this image.
+                        <br/><br/>3. The technique then combines the similar regions to form a larger region (based on color similarity, texture similarity, size similarity, and shape compatibility).
+                        <br/><br/>4. Finally, these regions then produce the final object locations (Region of Interest).
+                </div>
+
+                <div id="majorHeading">
+                        R-CNN
+                </div> 
+
+                <div id="mainBody">
+                        To bypass the problem of selecting a huge number of regions, Ross Girshick et al. proposed a method where we use selective search to extract just 2000 regions from the image and he called them region proposals. Therefore, now, instead of trying to classify a huge number of regions, you can just work with 2000 regions.
+                        <br><br>
+                </div>
+
+                <div id="contentImages">
+                        <center><img src="images/blog4/image4.png" width="650" height=""/></center>
+                </div>
+
+                <div id="mainBody">
+                        These 2000 candidate region proposals are warped into a square and fed into a convolutional neural network that produces a 4096-dimensional feature vector as output.
+                        <br/><br/>
+                        The CNN acts as a feature extractor and the output dense layer consists of the features extracted from the image and the extracted features are fed into an SVM to classify the presence of the object within that candidate region proposal.
+                        <br/><br/>
+                        In addition to predicting the presence of an object within the region proposals, the algorithm also predicts four values which are offset values to increase the precision of the bounding box. For example, given a region proposal, the algorithm would have predicted the presence of a person but the face of that person within that region proposal could’ve been cut in half. Therefore, the offset values help in adjusting the bounding box of the region proposal.
+                </div>
+
+                <div id="contentImages">
+                        <center><img src="images/blog4/image5.png" width="500" height=""/></center>
+                </div>
+
+                <div id="mainBody">
+                        Above diagram shows the working.
+                        <br><br>
+                </div>
+
+                <div id="minorHeading">
+                        Problem with R-CNN
+                </div>
+
+
+                <div id="mainBody">
+                        1. It still takes a huge amount of time to train the network as you would have to classify 2000 region proposals per image.
+                        <br><br>
+                        2. It cannot be implemented real time as it takes around 47 seconds for each test image.
+                </div>
+
+
+                <br><br>
+                <div id="mainBody">
+                        Now what?<br>
+                        Here comes our second algorithm.
+                </div>
+                <br><br>
+
+
+                <div id="majorHeading">
+                        Fast R-CNN
+                </div> 
+
+                <div id="mainBody">
+                        It is sure that fast R-CNN is faster than R-CNN? But how? <br><br>
+                        Before reading ahead, pause here, and take a guess. <br><br>
+                        Hint : Instead of running a CNN 2,000 times per image, can't we just run it once and get all the regions of interest (regions containing some object) or atleast get some hint of region.
+                        <br><br>
+                </div>
+
+                <div id="contentImages">
+                        <center><img src="images/blog4/image7.png" width="650" height=""/></center>
+                </div>
+
+                <div id="mainBody">
+                        The same author of the previous paper(R-CNN) solved some of the drawbacks of R-CNN to build a faster object detection algorithm and it was called Fast R-CNN. The approach is similar to the R-CNN algorithm. But, instead of feeding the region proposals to the CNN, we feed the input image to the CNN to generate a convolutional feature map.
+                </div>
+
+                <div id="contentImages">
+                        <center><img src="images/blog4/image6.png" width="500" height=""/></center>
+                </div>
+
+                <div id="mainBody">
+                        This is how Fast RCNN is comparitivly fast than RCNN, <br/><br/> 
+                        1. It passes one instead of 2000 regions per image.<br>
+                        2. It uses one instead of three different models for extracting features, classification and generating bounding boxes.
+                        <br><br>
+                </div>
+
+                <div id="minorHeading">
+                        Problem with fast R-CNN
+                </div>
+
+
+                <div id="mainBody">
+                        Yes! There are problems within this also.<br/><br>
+                        1. It takes around 2 seconds per image to detect objects, which is much better compared to RCNN. But when we consider large real-life datasets, then even a Fast RCNN doesn’t look so fast anymore.<br/>
+                        <br>
+                        2. It also uses selective search as a proposal method to find the Regions of Interest, which is a slow and time consuming process.
+                        <br><br>
+                </div>
+
+
+                <br><br>
+                <div id="mainBody">
+                        To overcome the above problems, the same author came up with another algorithm?<br>
+                        Guess its name?<br>
+                        I know you got it right.
+                </div>
+                <br><br>
+
+
+
+                <div id="majorHeading">
+                        Faster R-CNN
+                </div> 
+
+                <div id="mainBody">
+                        This is the fastest of all.
+                        <br><br>
+                </div>
+
+                <div id="contentImages">
+                        <center><img src="images/blog4/image8.png" width="450" height=""/></center>
+                </div>
+
+                <div id="mainBody">
+                        RCNN and Fast R-CNN uses selective search algorithms to fetch out the regions. This selective search algorithm a slow and time-consuming process and it affects the performance of the network.<br><br>
+                        Therefore in faster R-CNN we avoid using selective search algorithms.<br><br>
+                        Instead, a separate network ( “Region Proposal Network” or RPN ) is used to predict the region proposals. The predicted region proposals are then reshaped using a RoI pooling layer which is then used to classify the image within the proposed region and predict the offset values for the bounding boxes.
+                </div>
+
+                <br>
+                <div id="minorHeading">
+                        Okay, but what is RPN?
+                </div>
+
+
+                <div id="contentImages">
+                        <center><img src="images/blog4/image9.png" width="500" height=""/></center>
+                </div>
+
+                <div id="mainBody">
+                        Firstly, Faster RCNN takes the feature maps from CNN and passes them on to the Region Proposal Network. <br>
+                        <br>
+                        Now, RPN uses a sliding window over these feature maps, and at each window, it generates k Anchor boxes of different shapes and sizes.
+                        <br><br>
+                        Anchor boxes are fixed sized boundary boxes that are placed throughout the image and have different shapes and sizes
+                        <br><br>
+                        For each anchor, RPN predicts two things:<br><br>
+
+                        1. Probability that an anchor is an object.<br>
+                        2. Second is the bounding box regressor for adjusting the anchors to better fit the object.
+
+                        <br><br>
+
+                        We now have bounding boxes of different shapes and sizes which are passed on to the RoI pooling layer. Now it might be possible that after the RPN step, there are proposals with no classes assigned to them. We can take each proposal and crop it so that each proposal contains an object. This is what the RoI pooling layer does. It extracts fixed sized feature maps for each anchor:
+
+                </div>
+
+                <div id="contentImages">
+                        <center><img src="images/blog4/image9.jpg" width="500" height=""/></center>
+                </div>
+
+
+
+
+                <div id="majorHeading">
+                        Comparison between these algorithms : 
+                </div> 
+
+                <div id="mainBody">
+                       There is not much to say here,<br><br>
+                       Take a look below : <br><br>
+                </div>
+
+
+                <div id="contentImages">
+                        <center><img src="images/blog4/image11.png" width="500" height=""/></center>
+                </div>
+
+                <div id="mainBody">
+                        Further more,
+                 </div>
+ 
+
+                <div id="contentImages">
+                        <center><img src="images/blog4/image10.png" width="900" height=""/></center>
+                </div>
+
+                <br><br>
+
+                <div id="majorHeading">
+                        Conclusion 
+                </div> 
+
+                <div id="mainBody">
+                        I hope this blog will clear your doubts. There is one more algorithm name YOLO, which is even faster and more popular than these. But it is always important and interesting to have a knowledge of all these related algorithms.
+                        <br><br>
+                        All the best!
+                        <br><br>
+                        ~Aryan
+                 </div>
+
+                 <div id="majorHeading">
+                        References 
+                </div>
+
+       
+                <div id='mainBody'>
+                        <br><a href="https://www.analyticsvidhya.com/blog/2018/10/a-step-by-step-introduction-to-the-basic-object-detection-algorithms-part-1/">https://www.analyticsvidhya.com/blog/2018/10/a-step-by-step-introduction-to-the-basic-object-detection-algorithms-part-1/</a>
+                        <br><br><a href="https://towardsdatascience.com/r-cnn-3a9beddfd55a">https://towardsdatascience.com/r-cnn-3a9beddfd55a</a>
+                        <br><br><a href="https://towardsdatascience.com/r-cnn-fast-r-cnn-faster-r-cnn-yolo-object-detection-algorithms-36d53571365e">https://towardsdatascience.com/r-cnn-fast-r-cnn-faster-r-cnn-yolo-object-detection-algorithms-36d53571365e</a>
+                </div>
+
+
+        </div>
+    </body>
+</html>
