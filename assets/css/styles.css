@@ -900,11 +900,7 @@ body[data-theme="dark"] .text-muted {
     float: none !important;
   }
   .project-image {
-    margin-bottom: 15px;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
+    display: none;
   }
 }
 
