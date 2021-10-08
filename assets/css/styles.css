@@ -509,8 +509,8 @@ a.dotted-link:hover {
 #subject_name li {
   display: inline-block;
   padding: 2px 5px;
-  color: #374054;
-  background: #e4e4ea;
+  color: #e4e6ea;
+  background: #717786;
   list-style: none;
   cursor: default;
   font-size: 14px;
