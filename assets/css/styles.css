@@ -515,12 +515,12 @@ a.dotted-link:hover {
   cursor: default;
   font-size: 14px;
   border-radius: 4px;
-  margin-right: 4px;
+  margin: 0px 4px 4px 0px;
 }
 
 /* Testimonials section */
 .testimonials .item {
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 
 .testimonials .item:last-child {
