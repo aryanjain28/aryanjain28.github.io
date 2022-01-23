@@ -902,6 +902,9 @@ body[data-theme="dark"] .text-muted {
   .project-image {
     display: none;
   }
+  .brand-logo{
+    display: none;
+  }
 }
 
 @media (min-width: 1400px) {
@@ -1013,4 +1016,18 @@ body[data-theme="dark"] .text-muted {
 }
 .top i {
   color: #74808a;
+}
+
+.brand-logo {
+  float: left;
+  margin-right: 10px;
+  margin-top: 8px;
+}
+
+.brand-logo-bidwheelz {
+  margin-top: 5px;
+}
+
+.exp-desc {
+  text-align: justify;
 }
