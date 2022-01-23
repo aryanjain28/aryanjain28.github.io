@@ -1029,5 +1029,5 @@ body[data-theme="dark"] .text-muted {
 }
 
 .exp-desc {
-  text-align: justify;
+  /* text-align: justify; */
 }
