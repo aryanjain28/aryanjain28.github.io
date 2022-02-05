@@ -1028,6 +1028,10 @@ body[data-theme="dark"] .text-muted {
   margin-top: 5px;
 }
 
+.brand-logo-lemnisk {
+  margin-top: 14px;
+}
+
 .exp-desc {
   /* text-align: justify; */
 }
