@@ -518,6 +518,36 @@ a.dotted-link:hover {
   margin: 0px 4px 4px 0px;
 }
 
+#subject_name2 {
+  /* padding: 50px 15px; */
+  text-align: start;  
+}
+
+#subject_name2 h2 {
+  color: #374054;
+}
+
+#subject_name2 ul {
+  display: block;
+  margin: 0 ;
+  padding: 0;
+  max-width: 800px;
+}
+
+#subject_name2 li {
+  display: inline-block;
+  padding: 2px 5px;
+  color: #e4e6ea;
+  background: #717786;
+  list-style: none;
+  cursor: default;
+  font-size: 12px;
+  font-weight: 800;
+  border-radius: 4px;
+  margin: 0px 4px 0px 0px;
+}
+
+
 /* Testimonials section */
 .testimonials .item {
   /* margin-bottom: 30px; */
