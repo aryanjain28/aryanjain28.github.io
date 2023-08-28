@@ -574,15 +574,22 @@
                                     <p class="mb-2">
                                         <br />
 
-					Right now, I'm working on creating an online game using React for the visuals and Node.js, 
-					WebSockets (Socket.IO), and WebRTC for the technical side. The game lets multiple players 
-					join or create virtual rooms and then take turns based on their teams. 
-					After setting up the room, a chosen player's video starts streaming to other players in real time. 
-					This selected player act out a word or sentence while the others try to guess it quickly in the chatbox to score points. 
+                                        Developed a fun online game using WebSockets (Socket.IO) and WebRTC (Web Real-Time Communication). 
+                                        In this game, multiple players can join or create virtual rooms. 
+                                        After configuring the room, a peer-to-peer connection is established between the player's 
+                                        client and the server - implemented the SFU (Signal Forwarding Unit) architecture.
 
-					    <br/><br/>
+                                        <br/><br/>
 
-                                        Currently under development 🚧. Checkout progress here: <a href="https://github.com/aryanjain28/Dumb-Charades/#readme">https://github.com/aryanjain28/Dumb-Charades</a>
+                                        Once the setup is finalized, the webcam feed of the selected player, "streamer," 
+                                        starts streaming to the server. 
+                                        The server then broadcasts this stream to all the other players, "viewers.", in real-time. 
+                                        The muted streamer tries to act out the name of a movie, 
+                                        while the viewers try to quickly guess the movie's title in the chatbox in order to earn points. 
+
+					                    <br/><br/>
+
+                                        Read more here: <a href="https://github.com/aryanjain28/Dumb-Charades/#readme">https://github.com/aryanjain28/Dumb-Charades</a>
                                     </p>
                                 </div>
                             </div>
