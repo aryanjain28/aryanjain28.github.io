@@ -355,8 +355,8 @@ a { text-decoration: none; color: inherit; }
     .hero-section { background-attachment: scroll; }
     .countdown-section { background-attachment: scroll; }
     .rsvp-section { background-attachment: scroll; }
-    .hero-couple img { height: 18vh; }
-    .hero-couple { bottom: 12vh; }
+    .hero-couple img { height: 22vh; }
+    .hero-couple { bottom: 8vh; }
 }
 
 @media (max-width: 480px) {
