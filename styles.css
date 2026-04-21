@@ -47,11 +47,12 @@ body {
 #bgFixed {
     position: fixed;
     left: 0;
-    right: 0;
-    top: -15vh;
-    bottom: -15vh;
+    top: 0;
+    width: 100%;
     z-index: -1;
     background: url('assets/images/backgroud.png') center center / cover no-repeat;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 }
 .container { max-width: var(--container-width); margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
 .section { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; padding: var(--section-padding); overflow: hidden; }

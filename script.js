@@ -205,7 +205,7 @@
         function explodeAt(x, y, color, sparkCount) {
             for (var i = 0; i < sparkCount; i++) {
                 var angle = Math.random() * Math.PI * 2;
-                var speed = Math.random() * 7 + 3;
+                var speed = Math.random() * 3 + 1.2;
                 var c = Math.random() < 0.6 ? color : SPARK_COLORS[Math.floor(Math.random() * SPARK_COLORS.length)];
                 sparks.push({
                     x: x,
@@ -213,10 +213,10 @@
                     vx: Math.cos(angle) * speed,
                     vy: Math.sin(angle) * speed,
                     life: 1,
-                    decay: 0.006 + Math.random() * 0.01,
+                    decay: 0.004 + Math.random() * 0.006,
                     color: c,
                     size: Math.random() * 3.5 + 1.5,
-                    gravity: 0.025 + Math.random() * 0.02,
+                    gravity: 0.012 + Math.random() * 0.01,
                 });
             }
         }
@@ -234,7 +234,7 @@
                         var color = SPARK_COLORS[Math.floor(Math.random() * SPARK_COLORS.length)];
                         var count = 50 + Math.floor(Math.random() * 50);
                         explodeAt(x, y, color, count);
-                    }, idx * 120 + Math.random() * 100);
+                    }, idx * 250 + Math.random() * 150);
                 })(i);
             }
         }
@@ -382,7 +382,17 @@
     }
 
     /* ---------- INIT ---------- */
+    /* ---------- LOCK BACKGROUND HEIGHT ---------- */
+    function lockBgHeight() {
+        var bg = document.getElementById('bgFixed');
+        if (!bg) return;
+        // Set to screen height (not viewport) — never changes with URL bar
+        var h = window.screen.height;
+        bg.style.height = h + 'px';
+    }
+
     function init() {
+        lockBgHeight();
         setGuestGreeting();
         updateCountdown();
         setInterval(updateCountdown, 1000);
