@@ -46,7 +46,10 @@ body {
 
 #bgFixed {
     position: fixed;
-    inset: 0;
+    left: 0;
+    right: 0;
+    top: -15vh;
+    bottom: -15vh;
     z-index: -1;
     background: url('assets/images/backgroud.png') center center / cover no-repeat;
 }
