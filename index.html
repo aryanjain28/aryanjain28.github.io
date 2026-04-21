@@ -1,1393 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Aryan Jain | Portfolio | Projects | Blogs</title>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Hello! I am Aryan Jain. This is my personal portfolio website. Check out projects, blogs and more. Cheers 🙌">
-    <meta name="keywords"
-        content="aryanjain28, aryan, jain, data science, deep learning, machine learning, nlp, android" />
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Aryan Jain | Portfolio | Projects | Blogs">
-    <meta property="og:description"
-        content="Hello! I am Aryan Jain. This is my personal portfolio website. Check out projects, blogs and more. Cheers 🙌">
-    <meta property="og:url" content="https://aryanjain28.github.io/">
-    <meta property="og:site_name" content="Aryan Jain | Portfolio | Projects | Blogs">
-    <!-- <meta property="og:image" content="https://">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="800">
-    <meta property="og:image:type" content="image/jpeg"> -->
-
-    <meta name="twitter:url" content="https://aryanjain28.github.io/">
-    <meta name="twitter:title" content="Aryan Jain | Portfolio | Projects | Blogs">
-    <meta name="twitter:description"
-        content="Hello! I am Aryan Jain. This is my personal portfolio website. Check out projects, blogs and more. Cheers 🙌">
-    <meta name="twitter:card" content="summary">
-
-
-    <link rel="shortcut icon" href="favicon.ico">
-
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet'
-        type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-
-    <!-- FontAwesome JS -->
-    <script defer src="assets/fontawesome/js/all.js"></script>
-
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-
-    <!-- github calendar css -->
-    <link rel="stylesheet" href="assets/plugins/github-calendar/dist/github-calendar-responsive.css">
-    <!-- github activity css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
-    <link rel="stylesheet" href="assets/plugins/github-activity/src/github-activity.css">
-
-    <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-RRNN5XPNP5"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-RRNN5XPNP5');
-    </script> -->
-
-    <!-- ## JSON-LD Start ##   -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://aryanjain28.github.io/",
-            "@type": "Person",
-            "@id": "https://aryanjain28.github.io/",
-            "mainEntityOfPage": "https://aryanjain28.github.io/",
-            "sameAs": "https://aryanjain28.github.io/",
-            "name": "Aryan Jain | Portfolio | Projects | Blogs",
-            "description": "Hello! I am Aryan Jain. This is my personal portfolio website. Check out projects, blogs and more. Cheers 🙌"
-        }
-    </script>
-
-    <script type="text/javascript">
-        window.onload = function () {
-            var image = document.getElementById("lcImage");
-            var imageHolder = document.getElementById("lcImageHolder");
-            
-            image.classList.remove("img-hide");
-            imageHolder.classList.add("img-hide");
-
-        }
-        </script>
-    <!-- ## JSON-LD End ## -->
-
+    <title>Wedding Invitation — Prabhleen & Aryan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <!-- ******HEADER****** -->
-    <header id="main_header" class="header">
+
+    <!-- Fixed background -->
+    <div id="bgFixed"></div>
+
+    <!-- Falling Petals -->
+    <canvas id="petalsCanvas"></canvas>
+
+    <!-- Navigation Dots -->
+    <nav class="nav-dots" aria-label="Section navigation">
+        <a href="#hero" class="nav-dot active" data-section="hero" title="Home"></a>
+        <a href="#couple" class="nav-dot" data-section="couple" title="The Couple"></a>
+        <a href="#countdown" class="nav-dot" data-section="countdown" title="Save the Date"></a>
+        <a href="#haldi" class="nav-dot" data-section="haldi" title="Haldi"></a>
+        <a href="#wedding" class="nav-dot" data-section="wedding" title="Wedding"></a>
+        <a href="#reception" class="nav-dot" data-section="reception" title="Reception"></a>
+        <a href="#venue" class="nav-dot" data-section="venue" title="Venue"></a>
+        <a href="#rsvp" class="nav-dot" data-section="rsvp" title="RSVP"></a>
+    </nav>
+
+    <!-- ===================== HERO SECTION ===================== -->
+    <section id="hero" class="section hero-section">
+        <div class="hero-overlay"></div>
+        <div class="mandala-top-left"></div>
+        <div class="mandala-bottom-right"></div>
+        <div class="hero-content">
+            <p class="hero-subtitle fade-up">Together with their families</p>
+            <div class="ornamental-divider">
+                <span class="divider-line"></span>
+                <span class="divider-icon">&#10053;</span>
+                <span class="divider-line"></span>
+            </div>
+            <h1 class="hero-title fade-up">
+                <span class="name-bride">Prabhleen</span>
+                <span class="ampersand">&</span>
+                <span class="name-groom">Aryan</span>
+            </h1>
+            <p class="hero-tagline fade-up">Are getting married!</p>
+            <p class="hero-date fade-up">July 11, 2026</p>
+            <p class="guest-greeting fade-up" id="guestGreeting"></p>
+            <div class="scroll-indicator fade-up">
+                <span>Scroll Down</span>
+                <div class="scroll-arrow">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-couple" id="heroCouple">
+            <img src="assets/images/groom_and_bride.png" alt="Bride and Groom">
+        </div>
+    </section>
+
+    <!-- ===================== COUPLE SECTION ===================== -->
+    <section id="couple" class="section couple-section">
+        <div class="section-bg-pattern"></div>
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col">
-                    <img class="profile-image img-fluid float-start rounded-circle" src="assets/images/LinkedIn1.jpg"
-                        alt="profile image" width="180" height="180" />
-                    <div class="profile-content">
-                        <h1 class="name">Aryan Jain</h1>
-                        <h2 class="desc">Software Developer</h2>
-                        <ul class="social list-inline">
-                            <!-- <li class="list-inline-item"><a href="https://www.twitter.com/Aryan_Jain28"
-                                    target="_blank"><i class="fab fa-twitter"></i></a></li> -->
-                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/aryanjain28/"
-                                    target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                            <li class="list-inline-item"><a href="https://github.com/aryanjain28" target="_blank"><i
-                                        class="fab fa-github"></i></a></li>
-                            <!-- <li class="list-inline-item"><a href="https://www.facebook.com/aryanjn28" target="_blank"><i
-                                        class="fab fa-facebook"></i></a></li> -->
-                            <li class="list-inline-item"><a href="https://www.instagram.com/aryan.jain.28/"
-                                    target="_blank"><i class="fab fa-instagram"></i></a></li>
-                            <!-- <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow"></i></a></li>   
-		                    <li class="list-inline-item last-item"><a href="#"><i class="fab fa-codepen"></i></a></li>                 -->
-                        </ul>
+            <h2 class="section-title fade-up">The Couple</h2>
+            <div class="ornamental-divider fade-up">
+                <span class="divider-line"></span>
+                <span class="divider-icon">&#10053;</span>
+                <span class="divider-line"></span>
+            </div>
+            <div class="couple-container">
+                <div class="person-card fade-left">
+                    <div class="photo-frame">
+                        <div class="photo-frame-border"></div>
+                        <img src="assets/images/bride.jpg" alt="The Bride - Prabhleen" loading="lazy">
+                    </div>
+                    <h3 class="person-name">Prabhleen Saini</h3>
+                    <p class="person-subtitle">The Bride</p>
+                </div>
+                <div class="couple-heart fade-up">
+                    <div class="heart-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M50 88 C25 65, 0 50, 0 30 C0 12, 15 0, 30 0 C40 0, 48 8, 50 12 C52 8, 60 0, 70 0 C85 0, 100 12, 100 30 C100 50, 75 65, 50 88Z" fill="currentColor"/>
+                        </svg>
                     </div>
                 </div>
-                <div class="col-12 col-md-auto">
-                    <!-- <div class="dark-mode-switch d-flex">
-						<div class="form-check form-switch mx-auto mx-md-0">
-							<input type="checkbox" class="form-check-input me-2" id="darkSwitch" />
-							<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
-						</div>
-			        </div> -->
-                    <a class="btn btn-cta-primary" style="width: 100%;" href="#get_in_touch"><i
-                            class="fas fa-paper-plane"></i> Contact Me</a>
-                    <br />
-                    <a class="btn btn-cta-primary" style="margin-top: 10px; width: 100%;"
-                        href="./assets/files/Aryan_Jain_Resume.pdf" target="_blank" download="Aryan_Jain_Resume.pdf">
-                        <i class="fa fa-file"></i> Download Resume
-                    </a>
-		    <p style="font-style: italic; text-align: center; font-size: 10px;">Last Updated On: 3rd October, 2023</p>
-
+                <div class="person-card fade-right">
+                    <div class="photo-frame">
+                        <div class="photo-frame-border"></div>
+                        <img src="assets/images/groom.jpg" alt="The Groom - Aryan" loading="lazy">
+                    </div>
+                    <h3 class="person-name">Aryan Jain</h3>
+                    <p class="person-subtitle">The Groom</p>
                 </div>
             </div>
         </div>
-    </header>
-
-    <div class="container sections-wrapper py-5">
-        <div class="row">
-
-            <div class="primary col-lg-8 col-12">
-                <section class="about section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">About Me</h2>
-                        <div class="content">
-                            <p> I am an ardent enthusiast of full-stack and deep learning technologies,
-                                currently seeking opportunities to engage in web development,
-                                as well as machine and deep learning projects.
-                                My long-term professional aspiration is to become an esteemed AI researcher,
-                                allowing me to broaden and deepen my knowledge in this burgeoning field.
-                                At present, I am pursuing a master's degree in computer science
-                                at Northeastern University, Boston, MA. Previously, I have accrued substantial
-                                experience as a software developer at Josh Software,
-                                where I honed my proficiency in full-stack software engineering.
-                                My skillset encompasses an extensive range of competencies,
-                                encompassing both web development and deep learning domains.</p>
-				
-				Watch my short introduction <a target="_blank" href="https://youtu.be/6ijPhDWoE10"><b><i><u>video</u></i></b></a>. Hope you like it! :)
-
-                            <!-- <p>I also have experience in Android Development, Supervised Learning and Reinforcement Learning. I use to
-                                solve Kaggle problems to increase my knowledge in this domain. Please feel free to ping
-                                me, if you want to participate as a team with me in Kaggle competition.</p> -->
-
-                        </div>
-                    </div>
-
-
-                </section>
-
-                <section class="experience section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Work Experience</h2>
-                        <div class="content">
-
-                            <div class="item">
-                                <h3 class="title">Senior Software Engineer (January 2024 - Present)</h3>
-                                <h6 class=""><a href="https://www.fidelity.com/" target="_blank"
-                                    alt="Fidelity_Logo"
-                                        style="font-size: 20px;">Fidelity Investments, Boston, MA</a></h6>
-
-                                <div>
-
-                                    <a href="https://www.khoury.northeastern.edu/" target="_blank">
-                                        <img class="brand-logo" src="./assets/images/Fidelity_Logo.png" width="10%"
-                                            style="padding: 5px;" />
-                                    </a>
-
-                                    <p class="exp-desc">
-
-                                        Currently working as a Senior Software Engineer, Co-op, dedicated 
-                                        to building the company's FMAX platform (Fidelity Managed Account Xchange). 
-                                        This platform is designed to enhance the methods through which investment advice is 
-                                        delivered. 
-                                        The current technology stack is dynamic, encompassing 
-                                        Angular, Spring-Boot, Terraform, Docker, and other components.
-
-                                        <br />
-<!--                                         Checkout more here: <a href="https://clearingcustody.fidelity.com/app/item/RD_9895000/fidelity-managed-account-xchange-fmax.html">FMAX</a> -->
-
-                                    </p>
-
-
-                                    <div id="subject_name2">
-                                        <ul>
-                                            <li>Angular</li>
-                                            <li>Spring-Boot</li>
-                                            <li>Terraform</li>
-                                            <li>TypeScript</li>
-                                            <li>Agile</li>
-                                            <li>SDLC</li>
-
-                                        </ul>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <hr class="divider" />
-
-                            <div class="item">
-                                <h3 class="title">Teaching Assistant (January 2023 - Present)</h3>
-                                <h6 class=""><a href="https://www.khoury.northeastern.edu/" target="_blank"
-                                        style="font-size: 20px;">Khoury College of Computer Sciences, Northeastern
-                                        University, Boston, MA</a></h6>
-
-
-                                <div>
-
-                                    <a href="https://www.khoury.northeastern.edu/" target="_blank">
-                                        <img class="brand-logo" src="./assets/images/neuLogo.png" width="11%"
-                                            style="border-radius: 50%; padding: 3px;" />
-                                    </a>
-
-                                    <p class="exp-desc">
-
-
-                                        I served as a Teaching Assistant for the course "Fundamentals of Software Engineering" (CS-4530). In this capacity, I mentored students on diverse programming concepts, with a specific emphasis on full-stack development utilizing ReactJS, NodeJS, Typescript, Jest, and Mocha as the tech stack.
-
-                                        My responsibilities involved working closely with five groups, each consisting of four students, as they undertook their final project in full-stack development.
-                                        
-                                        Additionally, I provided support to students by addressing their queries related to course content, which encompassed topics such as Software Development Life Cycle (SDLC), project planning and estimation, requirements analysis, program design, as well as software scalability, reliability, quality, and testing.
-
-                                        <br />
-                                        Check out course website: <a href="https://neu-se.github.io/CS4530-Spring-2023/"
-                                            target="_blank">CS-4530</a>
-                                        <br />
-                                    </p>
-
-
-                                    <div id="subject_name2">
-                                        <ul>
-                                            <li>ReactJS</li>
-					    <li>NodeJS</li>
-					    <li>NextJS</li>
-                                            <li>Typescript</li>
-                                            <li>Fullstack</li>
-                                            <li>MySQl</li>
-					    <li>HTML & CSS</li>
-					    <li>SDLC</li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-
-
-
-                            </div>
-
-                            <hr class="divider" />
-
-
-                            <div class="item">
-                                <h3 class="title">Software Developer (January 2021 - November 2022)</h3>
-                                <h6 class=""><a href="https://joshsoftware.com/" target="_blank"
-                                        style="font-size: 20px;">Josh Software, Pune </a></h6>
-
-
-                                <div>
-                                    <a href="https://www.lemnisk.co/" target="_blank">
-                                        <img class="brand-logo brand-logo-lemnisk" src="./assets/images/lemniskLogo.png"
-                                            width="10%" />
-                                    </a>
-
-                                    <p class="exp-desc">
-
-                                        During my tenure at Josh Software, I had the privilege of working with Lemnisk
-                                        as our client.
-                                        Lemnisk stands as the pioneering real-time marketing automation solution,
-                                        underpinned by an intelligent and secure Customer Data Platform,
-                                        uniquely designed to enhance the conversion, retention, and growth objectives of
-                                        enterprises.
-                                        My role within the company entailed working as a full-stack developer,
-                                        specifically dedicated to the development of the CDP (Customer Data Platform)
-                                        and Marketing Automation (MA) platform.
-
-
-                                        <br />
-                                        More Information: <a href="https://www.lemnisk.co/"
-                                            target="_blank">https://www.lemnisk.co/</a>
-                                    </p>
-
-                                    <div id="subject_name2">
-                                        <ul>
-                                            <li>ReactJS</li>
-					    <li>NodeJS</li>
-					    <li>NextJS</li>
-                                            <li>Typescript</li>
-        				    <li>Wireframes & Prototypes</li>
-                                            <li>Fullstack</li>
-                                            <li>MySQl</li>
-					    <li>HTML & CSS (SASS/SCSS)</li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <hr class="divider" />
-
-                                <div>
-                                    <a href="https://www.bidwheelz.com/" target="_blank">
-                                        <img class="brand-logo brand-logo-bidwheelz"
-                                            src="./assets/images/bidwheelz-logo.png" width="10%" />
-                                    </a>
-
-                                    <p class="exp-desc">
-
-
-                                        As a software developer, I made significant contributions to the development of
-                                        BidWheelz,
-                                        an expansive online-live-bidding platform catering to various vehicle
-                                        categories.
-                                        Throughout this project, my primary responsibility involved collaborating with
-                                        ICICI Bank,
-                                        a leading private sector bank in India, to incorporate new technologies and
-                                        concepts such as Payment Gateways.
-                                        Additionally, I worked with real-time data management, executing essential
-                                        functions within this framework.
-
-
-                                        <br />
-                                        More Information: <a href="https://www.bidwheelz.com/"
-                                            target="_blank">https://www.bidwheelz.com/</a>
-                                    </p>
-
-                                    <div id="subject_name2">
-                                        <ul>
-                                            <li>ReactJS</li>
-                                            <li>Javascript</li>
-                                            <li>Frontend</li>
-                                            <li>MongoDB</li>
-					    <li>HTML & CSS (SASS/SCSS)</li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-
-
-
-
-                                <hr class="divider" />
-
-                                <div>
-                                    <a href="https://mylabdiscoverysolutions.com/mylab-launches-compact-xl-lab-in-a-box/"
-                                        target="_blank">
-                                        <img class="brand-logo" src="./assets/images/Mylab-Logo.png" width="10%" />
-                                    </a>
-
-                                    <p class="exp-desc">
-
-                                        In my capacity as a software developer,
-                                        I collaborated with a healthcare client to develop software for India's first
-                                        fully
-                                        automated Sample-to-PCR-ready system,
-                                        which negates the need for extensive infrastructure and capital investment
-                                        in testing laboratories. Specifically, I leveraged my expertise as a
-                                        frontend developer to create the UI for the machine's software using React.
-                                        Through my involvement in this project, I gained valuable experience in frontend
-                                        development,
-                                        including proficiency in working with sockets, as well as exposure to design
-                                        patterns used in industry applications.
-
-
-                                        </br>
-                                        More Information: <a
-                                            href="https://mylabdiscoverysolutions.com/mylab-launches-compact-xl-lab-in-a-box/"
-                                            target="_blank">https://mylabdiscoverysolutions.com/mylab-launches-compact-xl-lab-in-a-box/</a>
-                                    </p>
-
-                                    <div id="subject_name2">
-                                        <ul>
-                                            <li>Frontend</li>
-                                            <li>Javascript</li>
-		    				<li>React</li>
-					    <li>HTML & CSS (SASS/SCSS)</li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <hr class="divider" />
-
-
-                            <div class="item">
-                                <h3 class="title">Backend Developer (December 2019 - March 2020)</h3>
-                                <h6 class=""><a href="https://www.wolffkraft.com/" target="_blank"
-                                        style="font-size: 20px;">Wolffkraft Design Studio, Pune </a></h6>
-
-                                <div>
-
-                                    <a href="https://www.wolffkraft.com/" target="_blank">
-                                        <img class="brand-logo" src="./assets/images/Wolffkraft-Logo.png" width="9%"
-                                            style="border-radius: 50%;" />
-                                    </a>
-
-                                    <p class="exp-desc">
-
-                                        In my role as a back-end web developer,
-                                        I contributed to the development of two major projects within the company,
-                                        leveraging a range of MEAN stack technologies,
-                                        including Node.js, MongoDB, and Express.js.
-                                        Additionally, I gained experience working with various cloud platforms,
-                                        including AWS, MongoDB-Atlas, and Google Cloud. To ensure optimal performance,
-                                        I deployed the application on DigitalOcean,
-                                        and played a key role in single-handedly managing the back-end aspect of the
-                                        project.
-
-
-                                        <br />
-                                        More Information: <a href="https://www.wolffkraft.com/"
-                                            target="_blank">https://www.wolffkraft.com/</a>
-                                    </p>
-
-                                    <div id="subject_name2">
-                                        <ul>
-                                            <li>Backend</li>
-                                            <li>Javascript</li>
-                                            <li>Node</li>
-					    <li>AWS</li>
-					    <li>Databases (Mongo)</li>
-					    
-                                        </ul>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </section>
-
-
-
-                <section class="latest section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Projects</h2>
-                        <div class="content">
-
-                            <!-- 
-                            <div class="item row">
-                                <a class="image-container col-md-4 col-12"
-                                    href="https://github.com/aryanjain28/Neural-Networks-from-Scratch" target="_blank">
-                                    <img class="image-position img-fluid project-image rounded shadow-sm"
-                                        src="assets/images/projects/work_in_progress_image.jpg" alt="project name"
-                                        style="height: 12rem;" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a
-                                            href="https://github.com/aryanjain28/Neural-Networks-from-Scratch"
-                                            target="_blank">Neural Networks from Scratch</a></h3>
-                                    <div id="subject_name">
-                                        <ul>
-                                            <li>Building from Scratch</li>
-                                            <li>Machine Learning</li>
-                                            <li>Artificial Intelligence</li>
-                                        </ul>
-                                    </div>
-                                    <p class="mb-2">I always wanted to develop this project to gain a deeper
-                                        understanding of how things "really" work inside a neural network. <br />
-                                        So here I go!
-                                        <br />
-                                        P.s. This project is highly inspired by this book -
-                                        <a href="https://nnfs.io/" target="_blank">Neural Networks from Scratch in
-                                            Python - by Harrison Kinsley & Daniel Kukieła</a>. Its a great book, do have
-                                        a look at it!<br />
-                                        <br />
-                                         Paper: <a href="https://arxiv.org/abs/1611.07004">https://arxiv.org/abs/1611.07004</a></p> 
-                                    <p><a class="more-link"
-                                            href="https://github.com/aryanjain28/Neural-Networks-from-Scratch"
-                                            target="_blank"><i class="fas fa-external-link-alt"></i>Check out
-                                            progress...🏗️</a></p>
-                                </div>
-                            </div> -->
-
-
-
-                            <!-- <div class="item row">
-                                <a class="image-container col-md-4 col-12" href="https://github.com/aryanjain28/Colorization-using-GAN" target="_blank">
-                                <img class="image-position img-fluid project-image rounded shadow-sm" src="assets/images/projects/work_in_progress_image.jpg" alt="project name" style="height: 12rem;"/>
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="https://github.com/aryanjain28/Colorization-using-GAN" target="_blank">Colorize any Black & White Image</a></h3>
-                                    <div id="subject_name">
-                                        <ul>
-                                            <li>Generative Adversarial Networks</li>
-                                            <li>Machine Learning</li>
-                                            <li>Computer Vision</li>
-                                        </ul>
-                                    </div>
-                                    <p class="mb-2"><i>"Roses might be Blue, Voilets might be Red." </i><br/>
-                                        ~Discriminator.<br />
-                                        Let's find out!😄<br />
-                                        Developing a model that can colourize any black and white image or video. The model uses Generative Ad. Network. 
-                                        <br />
-                                        Paper: <a href="https://arxiv.org/abs/1611.07004">https://arxiv.org/abs/1611.07004</a></p>
-                                    <p><a class="more-link" href="https://github.com/aryanjain28/Colorization-using-GAN" target="_blank"><i class="fas fa-external-link-alt"></i>Check out progress</a></p>
-                                </div>                       
-                            </div> -->
-
-
-	                		<div class="item row">
-                                <a class="image-container col-md-4 col-12"
-                                    href="https://github.com/aryanjain28/Metamorphix/#readme" target="_blank">
-                                    <img class="image-position img-fluid project-image rounded shadow-sm"
-                                        src="assets/images/metamorphix_dashboard.png" alt="project name" height="450"
-                                        width="600" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="https://github.com/aryanjain28/Metamorphix/#readme"
-                                            target="_blank">Metamorphix</a></h3>
-                                    <div id="subject_name">
-                                        <ul>
-                                            <li>React.js</li>
-                                            <li>Node.js</li>
-                                            <li>Next.js</li>
-                                            <li>Express</li>
-                                            <li>MongoDB</li>
-                                        </ul>
-                                    </div>
-                                    <p class="mb-2">
-                                        <br />
-
-					    A comprehensive productivity software built using Typscript, React, Node.js, Firebase and MongoDB. 
-					    This platform assists registered users in organizing their daily schedules, managing tasks, and storing important files efficiently. 
-					    Furthermore, it offers insightful progress tracking through visually appealing charts such as heatmaps and radar charts. 
-					    Users also receive email notifications for important tasks and can assign priority levels to each tasks. 
-					    The integration of libraries like React-Query, moment.js, material-ui enhances the user experience.
-					    <br/><br/>
-
-                                        Read more here : <a href="https://github.com/aryanjain28/Metamorphix/#readme">https://github.com/aryanjain28/Metamorphix</a>
-                                    </p>
-                                </div>
-                            </div>
-
-
-                            <div class="item row">
-                                <a class="image-container col-md-4 col-12"
-                                    href="https://github.com/aryanjain28/Dumb-Charades/#readme" target="_blank">
-                                    <img class="image-position img-fluid project-image rounded shadow-sm"
-                                        src="assets/images/projects/dumb_charade_main.png" alt="project name" height="450"
-                                        width="600" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="https://github.com/aryanjain28/Dumb-Charades/#readme"
-                                            target="_blank">RealTime Dumb Charade Challenge</a></h3>
-                                    <div id="subject_name">
-                                        <ul>
-                                            <li>Socket.io</li>
-                                            <li>WebRTC</li>
-                                            <li>Real-Time</li>
-                                            <li>React.js</li>
-                                            <li>Node.js</li>
-                                        </ul>
-                                    </div>
-                                    <p class="mb-2">
-                                        <br />
-                                        
-                                        Created online <a href="https://en.wikipedia.org/?title=Dumb_Charades&redirect=no">Dumb-Charades</a> game using WebSockets (Socket.IO) and 
-                                        WebRTC (Web Real-Time Communication). 
-                                        In this game, players can join or create virtual rooms. 
-                                        After setting up the room, a peer-to-peer connection is 
-                                        made between the player's device and the server, 
-                                        using SFU (Signal Forwarding Unit) architecture.
-
-                                        <br/><br/>
-                                        Once everything is ready, the chosen player, called the 
-                                        "streamer," shares their webcam feed with the server. 
-                                        The server then sends this feed in real-time to all other players, 
-                                        known as "viewers." The "streamer" 
-                                        acts out a movie's name silently, 
-                                        while viewers rapidly guess the title in 
-                                        the chatbox to score points.
-					                    <br/><br/>
-
-                                        Read more here: <a href="https://github.com/aryanjain28/Dumb-Charades/#readme">https://github.com/aryanjain28/Dumb-Charades</a>
-                                    </p>
-                                </div>
-                            </div>
-
-
-                            <div class="item row">
-                                <a class="image-container col-md-4 col-12"
-                                    href="https://github.com/aryanjain28/frontend/#readme" target="_blank">
-                                    <img class="image-position img-fluid project-image rounded shadow-sm"
-                                        src="assets/images/projects/oms.png" alt="project name" height="450"
-                                        width="600" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="https://github.com/aryanjain28/frontend/#readme"
-                                            target="_blank">Workflow Management Solftware</a></h3>
-                                    <div id="subject_name">
-                                        <ul>
-                                            <li>React.js</li>
-                                            <li>Node.js</li>
-                                            <li>Express</li>
-                                            <li>MySQL</li>
-                                        </ul>
-                                    </div>
-                                    
-                                    <p class="mb-2">
-                                        Developed a specialized software solution catering to the needs of small businesses. 
-					    Implemented key functionalities including role-based user access management, 
-					    task allocation, payroll administration, HR management, and enhanced client communication. 
-					    All features seamlessly integrated within a unified platform, streamlining operations. 
-					    Notably, incorporated scalability for future feature expansion and leveraged tools from
-					    Amazon and Firebase to bolster client interaction and security. 
-                                        <br />
-                                        <br />
-                                        Frontend : <a
-                                            href="https://github.com/aryanjain28/frontend/#readme" target="_blank">https://github.com/aryanjain28/frontend</a>
-                                            <br />
-                                        Backend : <a
-                                            href="https://github.com/aryanjain28/backend/#readme" target="_blank">https://github.com/aryanjain28/backend</a>
-                                    </p>
-                                </div>
-                            </div>
-
-
-				
-
-                            <div class="item row">
-                                <a class="image-container col-md-4 col-12"
-                                    href="https://github.com/aryanjain28/Super-Resolution" target="_blank">
-                                    <img class="image-position img-fluid project-image rounded shadow-sm"
-                                        src="assets/images/projects/project-6.png" alt="project name" height="450"
-                                        width="600" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="https://github.com/aryanjain28/Super-Resolution"
-                                            target="_blank">Low Resolution Image to Super Resolution using GANs</a></h3>
-                                    <div id="subject_name">
-                                        <ul>
-                                            <li>GANs</li>
-                                            <li>Machine Learning</li>
-                                            <li>Computer Vision</li>
-                                        </ul>
-                                    </div>
-                                    <p class="mb-2">Studied about GANs and different state-of-the-art architectures to
-                                        build a model that can
-                                        convert a low resolution image to a fine-tuned super resolution image.
-                                        The project uses Enhanced Deep Residual Networks (EDSR) architecture of network
-                                        to generate
-                                        high resolution images.
-                                        <br />
-                                        EDSR paper: <a
-                                            href="https://arxiv.org/abs/1707.02921">https://arxiv.org/abs/1707.02921</a>
-                                    </p>
-                                    <p><a class="more-link" href="https://github.com/aryanjain28/Super-Resolution"
-                                            target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a>
-                                    </p>
-                                </div>
-                            </div>
-
-
-                            <div class="item row">
-                                <a class="image-container col-md-4 col-12"
-                                    href="https://github.com/aryanjain28/Indian-Roads" target="_blank">
-                                    <img class="image-position img-fluid project-image rounded shadow-sm"
-                                        src="assets/images/projects/project-7.gif" alt="project name"
-                                        style="height: 14rem;" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="https://github.com/aryanjain28/Indian-Roads"
-                                            target="_blank">Indian Roads - Object Detection using Android</a></h3>
-                                    <div id="subject_name">
-                                        <ul>
-                                            <li>Android</li>
-                                            <li>ML</li>
-                                            <li>Computer Vision</li>
-                                            <li>TF-Lite</li>
-                                        </ul>
-                                    </div>
-                                    <p class="mb-2">An android application that detects objects normally found on Indian
-                                        roads like - Car, Bicycle, Cow, Truck, etc. I used the TF-Lite model in this
-                                        application and downloaded specific categories from the COCO dataset to train
-                                        upon. The application uses the phone's rear camera and detects in real-time.
-                                    </p>
-                                    <p><a class="more-link" href="https://github.com/aryanjain28/Indian-Roads"
-                                            target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a>
-                                    </p>
-                                </div>
-                            </div>
-
-
-                            <div class="item row">
-                                <a class="image-container col-md-4 col-12"
-                                    href="https://github.com/aryanjain28/Image-Caption-Generator" target="_blank">
-                                    <img class="image-position img-fluid project-image rounded shadow-sm"
-                                        src="assets/images/projects/project-8.png" alt="project name" height="450"
-                                        width="600" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="https://github.com/aryanjain28/Image-Caption-Generator"
-                                            target="_blank">Image Caption Generator</a></h3>
-                                    <div id="subject_name">
-                                        <ul>
-                                            <li>RNN</li>
-                                            <li>CNN</li>
-                                            <li>Computer Vision</li>
-                                            <li>Keras</li>
-                                        </ul>
-                                    </div>
-                                    <p class="mb-2">Implementation of 'merge' architecture for generating image captions
-                                        from paper "What is the Role of Recurrent Neural Networks (RNNs) in an Image
-                                        Caption Generator?" using Keras. </p>
-                                    <p><a class="more-link"
-                                            href="https://github.com/aryanjain28/Image-Caption-Generator"
-                                            target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a>
-                                    </p>
-                                </div>
-                            </div>
-
-
-                            <div class="item row">
-                                <a class="image-container col-md-4 col-12"
-                                    href="https://github.com/aryanjain28/CIFAR-10-classification-with-an-accuracy-of-90-"
-                                    target="_blank">
-                                    <img class="image-position img-fluid project-image rounded shadow-sm"
-                                        src="assets/images/projects/project-10.png" alt="project name" height="450"
-                                        width="600" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a
-                                            href="https://github.com/aryanjain28/CIFAR-10-classification-with-an-accuracy-of-90-"
-                                            target="_blank">CIFAR-10 image classification with an accuracy-of ~90%</a>
-                                    </h3>
-                                    <div id="subject_name">
-                                        <ul>
-                                            <li>Deep Learning</li>
-                                            <li>CNN</li>
-                                            <li>Computer Vision</li>
-                                        </ul>
-                                    </div>
-                                    <p class="mb-2">CIFAR is a dataset comprised of 60,000 32×32 pixel color photographs
-                                        of objects from 10 classes like - cars, airplane, etc. </p>
-                                    <p><a class="more-link"
-                                            href="https://github.com/aryanjain28/CIFAR-10-classification-with-an-accuracy-of-90-"
-                                            target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a>
-                                    </p>
-                                </div>
-                            </div>
-
-
-                            <div class="item row">
-                                <a class="image-container col-md-4 col-12"
-                                    href="https://github.com/aryanjain28/Chrome-s-T-rex-game-played-by-machine-using-genetic-algorithm-NEAT"
-                                    target="_blank">
-                                    <img class="image-position img-fluid project-image rounded shadow-sm"
-                                        src="assets/images/projects/project-8.gif" alt="project name" height="450"
-                                        width="600" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a
-                                            href="https://github.com/aryanjain28/Chrome-s-T-rex-game-played-by-machine-using-genetic-algorithm-NEAT"
-                                            target="_blank">Chrome's T-rex game played by machine using genetic
-                                            algorithm (NEAT).</a></h3>
-                                    <div id="subject_name">
-                                        <ul>
-                                            <li>NEAT</li>
-                                            <li>Reinforcement</li>
-                                            <li>Genetic Algorithm</li>
-                                        </ul>
-                                    </div>
-                                    <p class="mb-2">All time famous offline Chrome's T-rex game played by machine using
-                                        gentic algorithm NEAT (Neuroevolution of Augmenting Topologies).</p>
-                                    <p><a class="more-link"
-                                            href="https://github.com/aryanjain28/Chrome-s-T-rex-game-played-by-machine-using-genetic-algorithm-NEAT"
-                                            target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a>
-                                    </p>
-                                </div>
-                            </div>
-
-
-                            <div class="item row">
-                                <a class="image-container col-md-4 col-12"
-                                    href="https://github.com/aryanjain28/Offline-Digit-Recognization-Application"
-                                    target="_blank">
-                                    <img class="image-position img-fluid project-image rounded shadow-sm"
-                                        src="assets/images/projects/project-11.png" alt="project name" height="450"
-                                        width="600" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a
-                                            href="https://github.com/aryanjain28/Offline-Digit-Recognization-Application"
-                                            target="_blank">Offline Digit Recognization Application</a></h3>
-                                    <div id="subject_name">
-                                        <ul>
-                                            <li>Deep Learning</li>
-                                            <li>CNN</li>
-                                        </ul>
-                                    </div>
-                                    <p class="mb-2"> A complete offline application built using python libraries that
-                                        uses neural network in order to predict the digit drawn over screen.</p>
-                                    <p><a class="more-link"
-                                            href="https://github.com/aryanjain28/Offline-Digit-Recognization-Application"
-                                            target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a>
-                                    </p>
-                                </div>
-                            </div>
-
-
-
-                            <div class="item row">
-                                <a class="image-container col-md-4 col-12"
-                                    href="https://github.com/aryanjain28/Neural-Network---Flappy-Game" target="_blank">
-                                    <img class="image-position img-fluid project-image rounded shadow-sm"
-                                        src="assets/images/projects/project-15.gif" alt="project name"
-                                        style="height: 15rem;" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a
-                                            href="https://github.com/aryanjain28/Neural-Network---Flappy-Game"
-                                            target="_blank">Flappy Bird Game using genetic algorithm (NEAT)</a></h3>
-                                    <div id="subject_name">
-                                        <ul>
-                                            <li>NEAT</li>
-                                            <li>Game Development</li>
-                                            <li>Reinforcement</li>
-                                        </ul>
-                                    </div>
-                                    <p class="mb-2">Flappy bird is a popular game in which the user tries to stay alive
-                                        by hopping between the close gap of two pipes. Here, I have studied about
-                                        genetic algorithm in neural network and blended the concept of neuro evolution
-                                        with Flappy Bird game. Data which is fed as input to the neural network is the
-                                        HEIGHT of bird from ground and DISTANCE of bird from the two pipes (d1 & d2).
-                                        This data provided to the neural network predicts whether the bird should jump
-                                        or not. </p>
-                                    <p><a class="more-link"
-                                            href="https://github.com/aryanjain28/Neural-Network---Flappy-Game"
-                                            target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a>
-                                    </p>
-                                </div>
-                            </div>
-
-
-                            <div class="item row">
-                                <a class="image-container col-md-4 col-12"
-                                    href="https://github.com/aryanjain28/Movie-review-prediction-ML-project-"
-                                    target="_blank">
-                                    <img class="image-position img-fluid project-image rounded shadow-sm"
-                                        src="assets/images/projects/project-13.png" alt="project name" height="450"
-                                        width="600" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a
-                                            href="https://github.com/aryanjain28/Movie-review-prediction-ML-project-"
-                                            target="_blank">Movie review prediction ML project</a></h3>
-                                    <div id="subject_name">
-                                        <ul>
-                                            <li>Machine Learning</li>
-                                            <li>Flask</li>
-                                        </ul>
-                                    </div>
-                                    <p class="mb-2">Project uses neural network in order to extract out sentiments from
-                                        a given movie review and tell whether it is a +ve review or a -ve one. It uses
-                                        flask module for data transformation between front-end and back-end. </p>
-                                    <p><a class="more-link"
-                                            href="https://github.com/aryanjain28/Movie-review-prediction-ML-project-"
-                                            target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a>
-                                    </p>
-                                </div>
-                            </div>
-
-
-                            <div class="item row">
-                                <a class="image-container col-md-4 col-12"
-                                    href="https://github.com/aryanjain28/Firebase" target="_blank">
-                                    <img class="image-position img-fluid project-image rounded shadow-sm"
-                                        src="assets/images/projects/project-16.png" alt="project name"
-                                        style="height: 15rem;" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="https://github.com/aryanjain28/Firebase"
-                                            target="_blank">Live location tracing Android App</a></h3>
-                                    <div id="subject_name">
-                                        <ul>
-                                            <li>Android Development</li>
-                                            <li>Google MAPs API</li>
-                                            <li>JAVA</li>
-                                        </ul>
-                                    </div>
-                                    <p class="mb-2"> A simple app that tracks the real time location of the people who
-                                        are using it and displays it over map.User needs to sign up in the application
-                                        for authentication after which he/she can enjoy the services without signing in
-                                        again and again. Application uses Google Firebase for it's data collection and
-                                        Google maps api key for the access of maps.</p>
-                                    <p><a class="more-link" href="https://github.com/aryanjain28/Firebase"
-                                            target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a>
-                                    </p>
-                                </div>
-                            </div>
-
-
-                            <div class="item row">
-                                <a class="image-container col-md-4 col-12"
-                                    href="https://github.com/aryanjain28/Tic-Tac-Toe-Android-Game" target="_blank">
-                                    <img class="image-position img-fluid project-image rounded shadow-sm"
-                                        src="assets/images/projects/project-17.png" alt="project name"
-                                        style="height: 15rem;" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="https://github.com/aryanjain28/Tic-Tac-Toe-Android-Game"
-                                            target="_blank">Tic-Tac-Toe Android Game</a></h3>
-                                    <div id="subject_name">
-                                        <ul>
-                                            <li>Android Development</li>
-                                            <li>JAVA</li>
-                                        </ul>
-                                    </div>
-                                    <p class="mb-2"> An android application to play our all time favourite tic-tac-toe
-                                        game.</p>
-                                    <p><a class="more-link"
-                                            href="https://github.com/aryanjain28/Tic-Tac-Toe-Android-Game"
-                                            target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a>
-                                    </p>
-                                </div>
-                            </div>
-
-
-
-                        </div>
-                    </div>
-                </section>
-
-
-                <!-- <section class="github section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">My GitHub</h2>
-                        <p>You can embed your GitHub contribution graph calendar using IonicaBizau's <a href="https://github.com/IonicaBizau/github-calendar" target="_blank">GitHub Calendar</a> widget. 
-                        
-                        <div id="github-graph" class="github-graph">
-
-                        </div>
-
-                        <p>You can also embed your GitHub activities using Casey Scarborough's <a href="https://github.com/caseyscarborough/github-activity" target="_blank">GitHub Activity Stream</a> widget.        
-                        //Usage: https://caseyscarborough.com/projects/github-activity/                   
-                        <div id="ghfeed" class="ghfeed">
-                        </div>
-                        
-                    </div>
-                </section> -->
-
-
+    </section>
+
+    <!-- ===================== COUNTDOWN SECTION ===================== -->
+    <section id="countdown" class="section countdown-section">
+        <div class="countdown-overlay"></div>
+        <div class="container">
+            <h2 class="section-title light fade-up">Save the Date</h2>
+            <div class="ornamental-divider light fade-up">
+                <span class="divider-line"></span>
+                <span class="divider-icon">&#10053;</span>
+                <span class="divider-line"></span>
             </div>
-
-
-
-            <div class="secondary col-lg-4 col-12">
-
-
-            <aside class="education aside section">
-                    <div class="lc-container shadow-sm rounded">
-
-
-                        <div id="lcImageHolder" class="lc-loading-text">Loading LeetCode Stats... &nbsp; ⏳</div>
-                        <a href="https://leetcode.com/aryanjain28/" target="_blank">
-                            <img    
-                                id="lcImage"
-                                class="img-hide" 
-                                width="100%" 
-                                height="100%"
-                                alt="Loading LeetCode Stats..." 
-                                src="https://leetcard.jacoblin.cool/aryanjain28?theme=light&font=Open%20Sans&ext=heatmap&show_rank=false&animation=true&cache=60"
-                            >
-                        </a>
-
-			    <p style="
-			    font-size: 50%;
-			    padding: 0;
-			    margin: 0;
-			    margin-bottom: 2px;
-			">
-			A Leetcode question a day, keeps the fear of interview away :)
-			
-			</p>
-
-
-                    </div>
-                </aside>
-
-
-                <aside class="education aside section">
-                    
-                    <div class="lc-container shadow-sm rounded" style="font-size: 13px;">
-                        GitHub Stats
-                        <div id="lcImageHolder" class="lc-loading-text img-hide">Loading GitHub Stats... &nbsp; ⏳</div>
-                        <a href="https://github.com/aryanjain28/" target="_blank">
-                            <img id="lcImage" class="" width="100%" height="100%" alt="Something went wrong! :(" src="https://github-readme-streak-stats.herokuapp.com?user=aryanjain28&hide_current_streak=true">				
-                        </a>
-		        
-                    </div>
-                </aside> 
-
-
-                <aside class="education aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Education</h2>
-                        <div class="content">
-                            <div class="item">
-                                <h3 class="title"><i class="fas fa-graduation-cap"></i> MS in Computer
-                                    Science</h3>
-                                <h4 class="university">Khoury College of Computer Sciences, NEU
-                                <span class="year"> '25</span>
-                                </h4>
-                                <h4 class="university">GPA &nbsp; <span class="year">4.0 &nbsp; <i>(current)</i> </span>
-                                </h4>
-                            </div>
-                            <div class="item">
-                                <h3 class="title"><i class="fas fa-graduation-cap"></i> B.E. Information Technology</h3>
-                                <h4 class="university">Savitribai Phule Pune University <span
-                                        class="year">(2017-2021)</span></h4>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
-
-
-                <aside id="blogs" class="blog aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Blogs</h2>
-
-			<div class="item">
-                            <h3 class="title"><a target="_blank" href="https://nbviewer.org/github/aryanjain28/aryanjain28.github.io/blob/master/assets/files/Providers_Comparison.pdf">Cloud Titans: Comparing AWS, GCP, Azure, and IBM 🚀 </a></h3>
-                            <p>
-				    A comprehensive comparison of the leading cloud platforms—Amazon Web Services (AWS), 
-				    Google Cloud Platform (GCP), Microsoft Azure, and IBM Cloud. 
-				    Explore their strengths, unique offerings, and key differences to help you make informed decisions for your cloud strategy.
-			    </p>
-                            
-                        </div>
-
-
-<!-- 		    	<div class="item">
-                            <h3 class="title"><a href="#">Docker + Kubernetes + Terraform✨</a></h3>
-                            <p>Simplify DevOps with Docker, Kubernetes, and Terraform: Your All-in-One Guide to Smooth Deployment and Management!</p>
-			    <p>Coming soon...⏳</p>
-                            
-                        </div> -->
-
-			<hr class="divider" />
-			    
-
-			    
-		    <div class="item">
-                            <h3 class="title"><a target="_blank" href="https://htmlpreview.github.io/?https://github.com/aryanjain28/Blog-WebRTC/blob/main/webrtc.html">Navigating the WebRTC Wonderworld: Exploring Peer-to-Peer Magic✨
-                            </a></h3>
-                            <p>
-                                Ever wondered how video calls work right 
-                                in your browser? Learn about WebRTC 
-                                and how it creates direct connections between
-                                 you and your friends for smooth video chats
-                                  and secure sharing. 
-                                  Join the adventure into the world of WebRTC and
-                                discover how it makes online togetherness 
-                                so easy! 
-                                <br/>
-                                <a
-                                href="https://htmlpreview.github.io/?https://github.com/aryanjain28/Blog-WebRTC/blob/main/webrtc.html"
-                                target="_blank"><i class="fas fa-external-link-alt"></i> Read more</a></p>
-                            </p>
-
-                        </div>
-
-			<hr class="divider" />
-
-		    	<div class="item">
-                            <h3 class="title"><a target="_blank" href="https://htmlpreview.github.io/?https://github.com/aryanjain28/Blog-Server-Side-Rendering/blob/main/ssr.html">Server Side Rendering: What and Why?</a></h3>
-                            <p>SSR or CSR: Which is better? When to Go for What? What's with this Nextjs stuff? Find out in this, short simple and sweet blog. 😊
-                            <br />
-                                <a
-                                    href="https://htmlpreview.github.io/?https://github.com/aryanjain28/Blog-Server-Side-Rendering/blob/main/ssr.html"
-                                    target="_blank"><i class="fas fa-external-link-alt"></i> Read more</a></p>
-
-                        </div>
-
-                        <hr class="divider" />
-
-		    	<div class="item">
-                            <h3 class="title"><a target="_blank" href="https://htmlpreview.github.io/?https://github.com/aryanjain28/Blog-Debouncing-and-Throttling/main/blogs/debouncing.html" target="_blank">Unraveling Debouncing and Throttling in React!</a></h3>
-                            <p>What is Debouncing and Throttling anyways? Is it easy? Is it important? Checkout my blog and let's debounce! 
-				<a
-                                    href="https://htmlpreview.github.io/?https://github.com/aryanjain28/Blog-Debouncing-and-Throttling/main/blogs/debouncing.html"
-                                    target="_blank">
-					&nbsp;&nbsp;
-					<i class="fas fa-external-link-alt"></i> 
-					Read more</a>
-			    </p>
-                        </div>
-<!-- 
-                        <hr class="divider" />
-
-                        <div class="item">
-                            <h3 class="title"><a href="#blogs">My GRE and TOEFL experience</a></h3>
-                            <p>Coming soon . . . 🙌</p>
-                        </div> -->
-
-                        <hr class="divider" />
-
-                        <div class="item">
-                            <h3 class="title"><a
-                                    href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/aryanjain28/Blog---R-CNN-Fast-R-CNN-Faster-R-CNN/master/blog4.html"
-                                    target="_blank">R-CNN, Fast R-CNN, Faster R-CNN</a></h3>
-                            <p>Computer vision is an interdisciplinary field that has been gaining huge amounts of
-                                traction in the recent years(since CNN) and . . . <a
-                                    href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/aryanjain28/Blog---R-CNN-Fast-R-CNN-Faster-R-CNN/master/blog4.html"
-                                    target="_blank"><i class="fas fa-external-link-alt"></i> Read more</a></p>
-                        </div>
-
-                        <hr class="divider" />
-
-
-                        <div class="item">
-                            <h3 class="title"><a
-                                    href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/aryanjain28/Blog-Convolution-Neural-Network-CNN-/master/blog3.html"
-                                    target="_blank">Convolution Neural Network (CNN) </a></h3>
-                            <p>Artificial Intelligence has been witnessing a monumental growth in bridging the gap
-                                between the capabilities of humans . . . <a
-                                    href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/aryanjain28/Blog-Convolution-Neural-Network-CNN-/master/blog3.html"
-                                    target="_blank"><i class="fas fa-external-link-alt"></i> Read more</a></p>
-                        </div>
-
-                        <hr class="divider" />
-
-
-                        <div class="item">
-                            <h3 class="title"><a
-                                    href="https://htmlpreview.github.io/?https://github.com/aryanjain28/Blog---Logistic-Regression/blob/master/blog1.html"
-                                    target="_blank">Introduction to Logistic Regression</a></h3>
-                            <p>In this blog, we will discuss the basic concepts of Logistic Regression and what kind of
-                                problems can it help us to solve . . . <a
-                                    href="https://htmlpreview.github.io/?https://github.com/aryanjain28/Blog---Logistic-Regression/blob/master/blog1.html"
-                                    target="_blank"><i class="fas fa-external-link-alt"></i> Read more</a></p>
-                        </div>
-
-                        <hr class="divider" />
-
-
-                        <div class="item">
-                            <h3 class="title"><a
-                                    href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/aryanjain28/Blog---Linear-Regression/master/blog2.html"
-                                    target="_blank">Introduction to Linear Regression and Polynomial Regression</a></h3>
-                            <p>In this blog, we will discuss two important topics that will form a base for Machine
-                                Learning which is “Linear Regression” and “Polynomial . . . <a
-                                    href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/aryanjain28/Blog---Linear-Regression/master/blog2.html"
-                                    target="_blank"><i class="fas fa-external-link-alt"></i> Read more</a></p>
-                        </div>
-
-
-                    </div>
-                </aside>
-
-
-                <aside class="testimonials aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Testimonials</h2>
-
-
-                        <div class="content">
-
-                            <div class="item">
-                                <blockquote class="quote">
-                                    <p><i class="fas fa-quote-left"></i>Aryan is an amazing developer. We worked
-                                        together on a project with complex features - and I could always trust him to
-                                        deliver. He's someone who looks forward to challenges and grows from them. He
-                                        also takes initiative and is excited to learn anything new.
-                                        <br />It was an absolute pleasure working with Aryan!<br /><br />
-                                </blockquote>
-                                <p class="source"><a href="https://www.linkedin.com/in/rahul-shah-77a3668a/"
-                                        target="_blank"><span class="name">Rahul Shah</span><br /><span
-                                            class="title">Software Developer at Josh Software, Inc.</span></a></p>
-                            </div>
-
-                            <hr class="divider" />
-
-                            <div class="item">
-                                <blockquote class="quote">
-                                    <p><i class="fas fa-quote-left"></i>Aryan worked on some of our core features and
-                                        did a fantastic job that created a huge impact. He would not mind walking the
-                                        extra mile to add more innovation to the product and figure out ways to solve
-                                        any problem that is thrown at him. He is a Product Manager's
-                                        delight.<br /><br />
-                                </blockquote>
-                                <p class="source"><a href="https://www.linkedin.com/in/coderwassananmol/"
-                                        target="_blank"><span class="name">Anmol Wassan</span><br /><span
-                                            class="title">Product @Lemnisk | B2B SaaS | AdTech | MarTech | EdTech |
-                                            Founder @hackCBS</span></a></p>
-                            </div>
-
-                            <hr class="divider" />
-
-                            <div class="item">
-                                <blockquote class="quote">
-                                    <p><i class="fas fa-quote-left"></i>Aryan is a doer. <br /><br /> I met him when he
-                                        interned with us and I was surprisingly amazed by this attitude towards
-                                        learning, getting better at his work and professionalism. He worked very closely
-                                        with our core team to build full-stack MVPs for our products. I found him to be
-                                        very responsible, self-motivated and he always took ownership of his work. All
-                                        we had to is discuss the outcomes and Aryan would work out his process and work
-                                        with the team efficiently. <br /><br /> I wish him all the best for his higher
-                                        studies and future endeavours. </p>
-                                </blockquote>
-                                <p class="source"><a href="https://www.linkedin.com/in/mohityadav/"
-                                        target="_blank"><span class="name">Mohit Yadav</span><br /><span
-                                            class="title">Founder & CEO, Wolffkraft Design Studio</span></a></p>
-                            </div>
-
-                            <hr class="divider" />
-
-                            <p><a class="more-link" href="https://www.linkedin.com/in/aryanjain28/"><i
-                                        class="fas fa-external-link-alt"></i>View on Linkedin</a></p>
-
-                        </div>
-                    </div>
-                </aside>
-
-
-
-                <aside class="skills aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Skills</h2>
-                        <div id="skills">
-                            <ul>
-                                <li>Machine Learning</li>
-                                <li>Deep Learning</li>
-                                <li>Computer Vision</li>
-                                <li>GANs</li>
-                                <li>Android Development</li>
-                                <li>Python</li>
-                                <li>C/C++</li>
-                                <li>Shell Scripting</li>
-                                <li>JavaScript</li>
-                                <li>Node js</li>
-                                <li>React js</li>
-                                <li>Java</li>
-                                <li>NumPy</li>
-                                <li>MatPlotLib</li>
-                                <li>OpenCV</li>
-                                <li>Tkinter</li>
-                                <li>SQLite</li>
-                                <li>MySQL</li>
-                                <li>MongoDB</li>
-                                <li>GIT</li>
-                                <li>HTML/CSS</li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </aside>
-
-                <aside class="languages aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Languages</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li class="item">
-                                    <span class="title"><strong>Hindi:</strong></span>
-                                    <span class="level">Native Speaker <br class="visible-xs" /><i
-                                            class="fas fa-star"></i> <i class="fas fa-star"></i> <i
-                                            class="fas fa-star"></i> <i class="fas fa-star"></i> <i
-                                            class="fas fa-star"></i> </span>
-                                </li>
-                                <li class="item">
-                                    <span class="title"><strong>English:</strong></span>
-                                    <span class="level">Professional Proficiency <br class="visible-sm visible-xs" /><i
-                                            class="fas fa-star"></i> <i class="fas fa-star"></i> <i
-                                            class="fas fa-star"></i><i class="fas fa-star"></i> <i
-                                            class="fas fa-star-half"></i></span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </aside>
-
-
-<!--                 <aside class="list music aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Favourite Coding Music</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-headphones"></i> <a
-                                        href="https://www.youtube.com/watch?v=C_rsdqKA6ok" target="_blank">Teriyaki Boyz
-                                        - Tokyo Drift</a></li>
-                                <li><i class="fas fa-headphones"></i> <a
-                                        href="https://www.youtube.com/watch?v=WhWgB0vx-iE" target="_blank">The
-                                        Strumbellas - Greatest Enemy</a></li>
-                                <li><i class="fas fa-headphones"></i> <a
-                                        href="https://www.youtube.com/watch?v=dzHdo4yxidc" target="_blank">Afrojack &
-                                        Martin Garrix - Turn Up The Speakers</a></li>
-                                <li><i class="fas fa-headphones"></i> <a
-                                        href="https://www.youtube.com/watch?v=yuFI5KSPAt4" target="_blank">Red Hot Chili
-                                        Peppers - Snow</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </aside> -->
-
-
-                <aside id="get_in_touch" class="info aside section">
-                    <div class="section-inner shadow-sm rounded">
-
-                        <h2 class="heading">Contact</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-map-marker-alt"></i><span class="sr-only">Location:</span>Boston,
-                                    MA, USA</li>
-                                <li><i class="fas fa-envelope"></i><span class="sr-only">Email:</span><a
-                                        href="mailto:aryanjn807@gmail.com" title="Send mail">aryanjn807@gmail.com</a>
-                                </li>
-				<li><i class="far fa-envelope"></i><span class="sr-only">Email:</span><a
-                                    href="mailto:jain.aryan@northeastern.edu" title="Send mail">jain.aryan@northeastern.edu</a>
-                                </li>
-                                <li><i class="fas fa-phone"></i><span class="sr-only">Phone:</span><a
-                                        href="https://wa.me/18573088848">+1 (857) 308-8848</a></li>
-                                <li><i class="fas fa-link"></i><span class="sr-only">Website:</span><a
-                                        href="https://aryanjain28.github.io/">https://aryanjain28.github.io/</a></li>
-                            </ul>
-                        </div>
-
-                        <hr class="divider" />
-
-                        <h2 class="heading">Get in Touch</h2>
-                        <div id="contact-form">
-                            <form method="POST" action="https://formspree.io/aryanjn807@gmail.com">
-                                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                                <input type="email" name="_replyto" placeholder="Your email" required>
-                                <textarea name="message" placeholder="Your message" required></textarea>
-                                <button type="submit">Send</button>
-                            </form>
-                        </div>
-
-                    </div>
-                </aside>
-
+            <p class="countdown-date fade-up">Saturday, July 11, 2026</p>
+            <div class="countdown-timer fade-up" id="countdownTimer">
+                <div class="countdown-item">
+                    <span class="countdown-value" id="days">000</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="hours">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="minutes">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="seconds">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
             </div>
-            <!--//secondary-->
-
-            <div class="top">
-                <span id="to-top">
-                    <a href="#main_header"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
-                </span>
-            </div>
-
         </div>
-    </div>
+    </section>
 
+    <!-- ===================== EVENTS TIMELINE ===================== -->
 
-    <!-- ******FOOTER****** -->
+    <!-- Haldi Event -->
+    <section id="haldi" class="section event-section event-haldi">
+        <div class="event-bg-decoration"></div>
+        <div class="container">
+            <div class="event-card fade-up">
+                <div class="event-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="event-svg">
+                        <circle cx="50" cy="35" r="20" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <path d="M50 55 L50 85" stroke="currentColor" stroke-width="3" fill="none"/>
+                        <path d="M35 70 Q50 80 65 70" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <circle cx="50" cy="35" r="8" fill="currentColor" opacity="0.3"/>
+                        <path d="M42 25 Q50 15 58 25" stroke="currentColor" stroke-width="2" fill="none"/>
+                    </svg>
+                </div>
+                <span class="event-number">01</span>
+                <h2 class="event-title">Haldi Ceremony</h2>
+                <div class="event-details">
+                    <div class="event-detail-item">
+                        <span class="detail-icon">&#128197;</span>
+                        <span>Friday, July 10, 2026</span>
+                    </div>
+                    <div class="event-detail-item">
+                        <span class="detail-icon">&#128336;</span>
+                        <span>6:00 PM onwards</span>
+                    </div>
+                    <div class="event-detail-item">
+                        <span class="detail-icon">&#128205;</span>
+                        <span>Dhakal Ranch, Corsicana</span>
+                    </div>
+                </div>
+                <p class="event-description">
+                    Join us for the auspicious Haldi ceremony as we bless the bride and groom
+                    with turmeric paste, bringing radiance and blessings for the new journey ahead.
+                    A joyous celebration filled with music, dance, and tradition.
+                </p>
+                <div class="event-dress-code">
+                    <span>Dress Code:</span> Yellow &amp; Traditional
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wedding Event -->
+    <section id="wedding" class="section event-section event-wedding">
+        <div class="event-bg-decoration"></div>
+        <div class="container">
+            <div class="event-card fade-up">
+                <div class="event-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="event-svg">
+                        <path d="M50 10 L60 35 L85 35 L65 52 L72 78 L50 62 L28 78 L35 52 L15 35 L40 35 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="50" cy="45" r="10" fill="currentColor" opacity="0.3"/>
+                    </svg>
+                </div>
+                <span class="event-number">02</span>
+                <h2 class="event-title">Wedding Ceremony</h2>
+                <div class="event-details">
+                    <div class="event-detail-item">
+                        <span class="detail-icon">&#128197;</span>
+                        <span>Saturday, July 11, 2026</span>
+                    </div>
+                    <div class="event-detail-item">
+                        <span class="detail-icon">&#128336;</span>
+                        <span>10:00 AM onwards</span>
+                    </div>
+                    <div class="event-detail-item">
+                        <span class="detail-icon">&#128205;</span>
+                        <span>Dhakal Ranch, Corsicana</span>
+                    </div>
+                </div>
+                <p class="event-description">
+                    Witness the sacred union as Prabhleen &amp; Aryan take their seven vows around the holy fire.
+                    An enchanting evening of ancient Vedic rituals, blessings, and the beginning of
+                    a beautiful new chapter together.
+                </p>
+                <div class="event-dress-code">
+                    <span>Dress Code:</span> Traditional Indian Attire
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reception Event -->
+    <section id="reception" class="section event-section event-reception">
+        <div class="event-bg-decoration"></div>
+        <div class="container">
+            <div class="event-card fade-up">
+                <div class="event-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="event-svg">
+                        <rect x="20" y="50" width="60" height="35" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <path d="M20 60 Q50 45 80 60" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <path d="M35 50 L35 35 Q50 20 65 35 L65 50" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <circle cx="50" cy="32" r="5" fill="currentColor" opacity="0.3"/>
+                        <line x1="50" y1="15" x2="50" y2="22" stroke="currentColor" stroke-width="2"/>
+                        <line x1="40" y1="20" x2="45" y2="26" stroke="currentColor" stroke-width="1.5"/>
+                        <line x1="60" y1="20" x2="55" y2="26" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <span class="event-number">03</span>
+                <h2 class="event-title">Grand Reception</h2>
+                <div class="event-details">
+                    <div class="event-detail-item">
+                        <span class="detail-icon">&#128197;</span>
+                        <span>Saturday, July 11, 2026</span>
+                    </div>
+                    <div class="event-detail-item">
+                        <span class="detail-icon">&#128336;</span>
+                        <span>6:00 PM onwards</span>
+                    </div>
+                    <div class="event-detail-item">
+                        <span class="detail-icon">&#128205;</span>
+                        <span>Dhakal Ranch, Corsicana</span>
+                    </div>
+                </div>
+                <p class="event-description">
+                    Celebrate with us at a grand evening of dinner, dance, and festivities.
+                    Join the newlyweds as they begin their journey together, surrounded by
+                    love, laughter, and unforgettable memories.
+                </p>
+                <div class="event-dress-code">
+                    <span>Dress Code:</span> Cocktail / Indo-Western
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== GALLERY SECTION ===================== -->
+    <section id="gallery" class="section gallery-section">
+        <div class="section-bg-pattern"></div>
+        <div class="container">
+            <h2 class="section-title fade-up">Our Moments</h2>
+            <div class="ornamental-divider fade-up">
+                <span class="divider-line"></span>
+                <span class="divider-icon">&#10053;</span>
+                <span class="divider-line"></span>
+            </div>
+            <div class="gallery-carousel fade-up" id="galleryCarousel">
+                <button class="carousel-arrow carousel-arrow--left" id="carouselPrev" aria-label="Previous image">&#10094;</button>
+                <div class="carousel-image">
+                    <img id="carouselImg" src="assets/images/couple1.jpg" alt="Couple moment">
+                </div>
+                <button class="carousel-arrow carousel-arrow--right" id="carouselNext" aria-label="Next image">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== VENUE / MAP SECTION ===================== -->
+    <section id="venue" class="section venue-section">
+        <div class="section-bg-pattern"></div>
+        <div class="container">
+            <h2 class="section-title fade-up">Venue</h2>
+            <div class="ornamental-divider fade-up">
+                <span class="divider-line"></span>
+                <span class="divider-icon">&#10053;</span>
+                <span class="divider-line"></span>
+            </div>
+            <div class="venue-info fade-up">
+                <h3 class="venue-name">Dhakal Ranch, Texas</h3>
+                <p class="venue-address">3500 Navarro Dr, Corsicana, TX 75110</p>
+            </div>
+            <div class="map-container fade-up">
+                <iframe
+                    src="https://maps.google.com/maps?q=Dhakal+Ranch,+3500+Navarro+Dr,+Corsicana,+TX+75110&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    width="100%"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Wedding Venue Location">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== RSVP SECTION ===================== -->
+    <section id="rsvp" class="section rsvp-section">
+        <div class="rsvp-overlay"></div>
+        <div class="container">
+            <div class="rsvp-glass fade-up">
+            <h2 class="section-title fade-up">RSVP</h2>
+            <div class="ornamental-divider fade-up">
+                <span class="divider-line"></span>
+                <span class="divider-icon">&#10053;</span>
+                <span class="divider-line"></span>
+            </div>
+            <p class="rsvp-subtitle fade-up">We would be honored by your presence. Kindly respond by June 15, 2026.</p>
+            <form class="rsvp-form fade-up" id="rsvpForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="rsvpName">Full Name</label>
+                        <input type="text" id="rsvpName" name="name" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rsvpEmail">Email</label>
+                        <input type="email" id="rsvpEmail" name="email" placeholder="your@email.com" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="rsvpPhone">Phone Number</label>
+                        <input type="tel" id="rsvpPhone" name="phone" placeholder="+1 (XXX) XXX-XXXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="rsvpGuests">Number of Guests</label>
+                        <select id="rsvpGuests" name="guests">
+                            <option value="1">1 Guest</option>
+                            <option value="2" selected>2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5+ Guests</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Which events will you attend?</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="events" value="haldi"> Haldi Ceremony
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="events" value="wedding" checked> Wedding Ceremony
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="events" value="reception" checked> Grand Reception
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="rsvpAttendance">Will you attend?</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="attendance" value="yes" required checked>
+                            <span class="radio-custom"></span>
+                            Joyfully Accept
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="attendance" value="no">
+                            <span class="radio-custom"></span>
+                            Regretfully Decline
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="rsvpMessage">Blessings &amp; Wishes</label>
+                    <textarea id="rsvpMessage" name="message" rows="4" placeholder="Share your blessings for the couple..."></textarea>
+                </div>
+                <button type="submit" class="rsvp-submit">
+                    <span>Send RSVP</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon">
+                        <path d="M22 2L11 13"></path>
+                        <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+                    </svg>
+                </button>
+            </form>
+            <div class="rsvp-success" id="rsvpSuccess">
+                <div class="success-icon">&#10003;</div>
+                <h3>Thank You!</h3>
+                <p>Your RSVP has been received. We look forward to celebrating with you!</p>
+            </div>
+            </div><!-- /rsvp-glass -->
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
     <footer class="footer">
-        <div class="container text-center">
-            <span class="year">&nbsp; <i>Last update: 03 October, 2023 <i>[Updated Resume]</i> </span>
+        <div class="footer-mandala"></div>
+        <div class="container">
+            <p class="footer-names">Prabhleen <span>&amp;</span> Aryan</p>
+            <p class="footer-date">July 11, 2026 &bull; Corsicana, TX</p>
+            <p class="footer-message">Made with love &#10084;</p>
         </div>
-        <!--//container-->
     </footer>
-    <!--//footer-->
 
-    <!-- Javascript -->
-    <script type="text/javascript" src="assets/plugins/popper.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/vanilla-rss/dist/rss.global.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/dark-mode-switch/dark-mode-switch.min.js"></script>
-    <!-- github calendar plugin -->
-    <script type="text/javascript" src="assets/plugins/github-calendar/dist/github-calendar.min.js"></script>
-    <!-- github activity plugin -->
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/github-activity/src/github-activity.js"></script>
-    <!-- custom js -->
-    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
