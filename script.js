@@ -249,7 +249,7 @@
                         fwObserver.unobserve(countdownEl);
                     }
                 });
-            }, { threshold: 0.3 });
+            }, { threshold: 0.6 });
             fwObserver.observe(countdownEl);
         }
 
@@ -382,17 +382,20 @@
     }
 
     /* ---------- INIT ---------- */
-    /* ---------- LOCK BACKGROUND HEIGHT ---------- */
-    function lockBgHeight() {
+    /* ---------- LOCK BACKGROUND SIZE (mobile only) ---------- */
+    function lockBgSize() {
         var bg = document.getElementById('bgFixed');
         if (!bg) return;
-        // Set to screen height (not viewport) — never changes with URL bar
-        var h = window.screen.height;
-        bg.style.height = h + 'px';
+        // Only lock on mobile/touch — prevents URL bar resize jank
+        // Desktop uses inset:0 which handles zoom correctly
+        var isMobile = 'ontouchstart' in window || window.innerWidth <= 1024;
+        if (isMobile) {
+            bg.style.height = window.screen.height + 'px';
+        }
     }
 
     function init() {
-        lockBgHeight();
+        lockBgSize();
         setGuestGreeting();
         updateCountdown();
         setInterval(updateCountdown, 1000);
