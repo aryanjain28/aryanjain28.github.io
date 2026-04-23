@@ -346,10 +346,10 @@
     /* ---------- IMAGE CAROUSEL ---------- */
     function initCarousel() {
         var images = [
-            'assets/images/couple1.jpg',
-            'assets/images/bride.jpg',
-            'assets/images/groom.jpg',
-            'assets/images/couple2.jpg',
+            'assets/images/couple_pune.jpg',
+            'assets/images/couple_bbnp.jpg',
+            'assets/images/couple_acadia.png',
+            'assets/images/couple_grad.png'
         ];
         var idx = 0;
         var img = document.getElementById('carouselImg');

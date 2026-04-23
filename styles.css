@@ -109,6 +109,7 @@ a { text-decoration: none; color: inherit; }
 
 /* Hero couple image */
 .hero-couple {
+    display: none;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -161,7 +162,7 @@ a { text-decoration: none; color: inherit; }
 .person-subtitle { font-family: var(--font-heading); font-size: 0.85rem; color: var(--color-gold); text-transform: uppercase; letter-spacing: 3px; font-weight: 500; }
 .couple-photo {
     width: 100%;
-    max-width: 550px;
+    max-width: 320px;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 12px 40px rgba(0,0,0,0.1);
@@ -232,7 +233,7 @@ a { text-decoration: none; color: inherit; }
 /* ============================================================
    GALLERY SECTION
    ============================================================ */
-.gallery-section { background: transparent; min-height: auto; padding: 100px 0; }
+.gallery-section { background: transparent; padding: 100px 0; }
 .gallery-carousel {
     display: flex;
     align-items: center;
@@ -320,7 +321,7 @@ a { text-decoration: none; color: inherit; }
 /* ============================================================
    VENUE / MAP SECTION
    ============================================================ */
-.venue-section { background: transparent; min-height: auto; padding: 100px 0 60px; }
+.venue-section { background: transparent; padding: 100px 0 60px; }
 .venue-info { text-align: center; margin-bottom: 32px; }
 .venue-name { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.8rem); color: var(--color-maroon); margin-bottom: 8px; }
 .venue-address { font-family: var(--font-heading); font-size: 1rem; color: var(--color-text-medium); font-weight: 300; }
@@ -365,7 +366,7 @@ a { text-decoration: none; color: inherit; }
     .couple-names { gap: 16px; }
     .person-name { font-size: 1.5rem; }
     .couple-amp { font-size: 2rem; }
-    .couple-photo { max-width: 90%; }
+    .couple-photo { max-width: 60%; }
     .form-row { grid-template-columns: 1fr; gap: 0; }
     .event-card { padding: 40px 28px; }
     .event-number { font-size: 4rem; right: 16px; }
@@ -373,7 +374,7 @@ a { text-decoration: none; color: inherit; }
     .countdown-separator { font-size: 1.5rem; }
     .radio-group, .checkbox-group { flex-direction: column; gap: 12px; }
     .carousel-arrow { width: 38px; height: 38px; font-size: 1rem; }
-    .map-container iframe { height: 300px; }
+    .map-container iframe { height: 350px; }
     .hero-section { background-attachment: scroll; }
     .countdown-section { background-attachment: scroll; }
     .rsvp-section { background-attachment: scroll; }
