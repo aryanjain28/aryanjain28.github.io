@@ -294,26 +294,56 @@
     }
 
     /* ---------- RSVP FORM ---------- */
+    // Paste your Google Apps Script web app URL here after setup:
+    var RSVP_SHEET_URL = 'https://script.google.com/macros/s/AKfycbxvizPid3_jnKh5l6Vc5T0caTi4c7D5MpJDhFBtqbaRuuPs4i1klmCI9XsXpGnD_hfT8w/exec';
+
     function initRSVP() {
         const form = document.getElementById('rsvpForm');
         const success = document.getElementById('rsvpSuccess');
         if (!form || !success) return;
+
         form.addEventListener('submit', function (e) {
             e.preventDefault();
+
+            const btn = form.querySelector('.rsvp-submit');
+            const btnLabel = btn.querySelector('span');
+            btn.disabled = true;
+            btnLabel.textContent = 'Sending…';
+
             const formData = new FormData(form);
-            const data = {};
-            formData.forEach((value, key) => {
-                if (data[key]) {
-                    if (Array.isArray(data[key])) data[key].push(value);
-                    else data[key] = [data[key], value];
-                } else {
-                    data[key] = value;
-                }
+            const events = formData.getAll('events');
+            const eventLabels = { haldi: 'Haldi Ceremony', wedding: 'Wedding Ceremony', reception: 'Grand Reception' };
+            const eventsText = events.length
+                ? events.map(function(ev) { return eventLabels[ev] || ev; }).join(', ')
+                : 'None';
+
+            const payload = JSON.stringify({
+                name:       formData.get('name') || '',
+                email:      formData.get('email') || '',
+                phone:      formData.get('phone') || '',
+                guests:     formData.get('guests') || '',
+                attendance: formData.get('attendance') === 'yes' ? 'Accepting' : 'Declining',
+                events:     eventsText,
+                message:    formData.get('message') || '',
             });
-            console.log('RSVP Submitted:', data);
-            form.style.display = 'none';
-            success.classList.add('show');
-            success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            function showSuccess() {
+                form.style.display = 'none';
+                success.classList.add('show');
+                success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+
+            if (RSVP_SHEET_URL && RSVP_SHEET_URL !== 'YOUR_APPS_SCRIPT_URL') {
+                fetch(RSVP_SHEET_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'text/plain' },
+                    body: payload,
+                }).finally(showSuccess);
+            } else {
+                console.log('RSVP (sheet not configured):', payload);
+                showSuccess();
+            }
         });
     }
 
