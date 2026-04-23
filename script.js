@@ -312,7 +312,7 @@
 
             const formData = new FormData(form);
             const events = formData.getAll('events');
-            const eventLabels = { haldi: 'Haldi Ceremony', wedding: 'Wedding Ceremony', reception: 'Grand Reception' };
+            const eventLabels = { haldi: 'Haldi Ceremony', wedding: 'Wedding Ceremony', reception: 'Reception' };
             const eventsText = events.length
                 ? events.map(function(ev) { return eventLabels[ev] || ev; }).join(', ')
                 : 'None';
